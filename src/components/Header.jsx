@@ -10,12 +10,12 @@ export default function Header() {
   const whatsappUrl = "https://wa.me/919745569225?text=Hello%20Adv.%20P.%20R.%20Rathy%2C%20I%20would%20like%20to%20make%20a%20legal%20enquiry.";
 
   const navItems = [
-    { name: 'HOME', href: '#home' },
-    { name: 'ABOUT', href: '#about' },
-    { name: 'PRACTICE AREAS', href: '#practice-areas' },
-    { name: 'EXPERIENCE', href: '#experience' },
-    { name: 'NOTARY', href: '#notary' },
-    { name: 'CONTACT', href: '#contact' },
+    { name: 'HOME', href: '/#home' },
+    { name: 'ABOUT', href: '/#about' },
+    { name: 'PRACTICE AREAS', href: '/#practice-areas' },
+    { name: 'EXPERIENCE', href: '/#experience' },
+    { name: 'NOTARY SERVICES', href: '/notary-services' },
+    { name: 'CONTACT', href: '/#contact' },
   ];
 
   return (
@@ -24,9 +24,15 @@ export default function Header() {
         <div className="px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
           
           {/* Brand / Official Advocate Logo Image */}
-          <a href="#home" className="flex items-center gap-3 group">
+          <a href="/#home" className="flex items-center gap-3 group">
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-[#0D1110] border border-[#6B7E74]/50 flex items-center justify-center relative shadow-sm group-hover:border-[#6B7E74] transition-colors p-1">
-              <img src="/logo.png" alt="Adv. P. R. Rathy Logo" className="w-full h-full object-contain" />
+              <img 
+                src="/advocate-notary-logo.webp" 
+                alt="Adv. P. R. Rathy Logo" 
+                className="w-full h-full object-contain" 
+                width={44}
+                height={44}
+              />
             </div>
 
             <div className="flex flex-col">

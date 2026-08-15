@@ -15,9 +15,15 @@ export default function Footer() {
           
           {/* Brand Column */}
           <div className="md:col-span-5 space-y-4">
-            <a href="#home" className="flex items-center gap-3">
+            <a href="/#home" className="flex items-center gap-3">
               <div className="w-10 h-10 rounded-lg bg-[#6B7E74]/20 border border-[#6B7E74]/50 flex items-center justify-center p-1">
-                <img src="/logo.png" alt="Adv. P. R. Rathy Logo" className="w-full h-full object-contain" />
+                <img 
+                  src="/advocate-notary-logo.webp" 
+                  alt="Adv. P. R. Rathy Logo" 
+                  className="w-full h-full object-contain" 
+                  width={40}
+                  height={40}
+                />
               </div>
               <div className="flex flex-col">
                 <span className="font-cormorant text-xl font-bold text-white tracking-wider leading-tight">
@@ -46,12 +52,12 @@ export default function Footer() {
               QUICK NAVIGATION
             </h4>
             <ul className="space-y-2 text-xs text-[#D0D4D2]">
-              <li><a href="#home" className="hover:text-[#6B7E74] transition-colors">Home</a></li>
-              <li><a href="#about" className="hover:text-[#6B7E74] transition-colors">About Adv. P. R. Rathy</a></li>
-              <li><a href="#practice-areas" className="hover:text-[#6B7E74] transition-colors">Practice Areas</a></li>
-              <li><a href="#notary" className="hover:text-[#6B7E74] transition-colors">Notary Public</a></li>
-              <li><a href="#experience" className="hover:text-[#6B7E74] transition-colors">Practice Jurisdiction</a></li>
-              <li><a href="#contact" className="hover:text-[#6B7E74] transition-colors">Contact Office</a></li>
+              <li><a href="/#home" className="hover:text-[#6B7E74] transition-colors">Home</a></li>
+              <li><a href="/#about" className="hover:text-[#6B7E74] transition-colors">About Adv. P. R. Rathy</a></li>
+              <li><a href="/#practice-areas" className="hover:text-[#6B7E74] transition-colors">Practice Areas</a></li>
+              <li><a href="/notary-services" className="hover:text-[#6B7E74] transition-colors">Notary Services</a></li>
+              <li><a href="/#experience" className="hover:text-[#6B7E74] transition-colors">Practice Jurisdiction</a></li>
+              <li><a href="/#contact" className="hover:text-[#6B7E74] transition-colors">Contact Office</a></li>
             </ul>
           </div>
 

@@ -53,6 +53,16 @@ export default function JurisdictionNotary() {
                   <span className="text-xs text-white font-medium font-sans">Official Notarial Documentation</span>
                 </div>
               </div>
+
+              <div className="pt-4">
+                <a
+                  href="/notary-services"
+                  className="inline-flex items-center gap-2 bg-[#6B7E74] hover:bg-[#586A61] text-white px-6 py-3 rounded-lg text-xs font-bold tracking-wider uppercase transition-all shadow-sm font-sans"
+                >
+                  <span>VIEW ALL NOTARY PUBLIC SERVICES</span>
+                  <span>→</span>
+                </a>
+              </div>
             </div>
 
             {/* Right Emblem Illustration */}

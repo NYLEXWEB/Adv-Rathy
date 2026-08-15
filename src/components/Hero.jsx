@@ -14,7 +14,7 @@ export default function Hero() {
       {/* Hero Section Background Image Overlay - Extends seamlessly behind fixed Navbar */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15 pointer-events-none mix-blend-multiply transition-opacity duration-300"
-        style={{ backgroundImage: "url('/hero%20section.jpg')" }}
+        style={{ backgroundImage: "url('/notary-public-advocate-hero-wayanad.webp')" }}
       />
 
       {/* Subtle Paper Texture & Soft Radial Warm Glow */}
@@ -27,18 +27,18 @@ export default function Hero() {
         <div className="inline-flex items-center justify-center gap-2 bg-[#FAF8F3]/90 border border-[#6B7E74]/50 px-4 py-1.5 rounded-full shadow-2xs backdrop-blur-xs">
           <Scale className="w-4 h-4 text-[#6B7E74]" strokeWidth={1.6} />
           <span className="text-[10px] sm:text-xs font-bold text-[#6B7E74] tracking-[0.25em] uppercase font-sans">
-            ADVOCATE &amp; NOTARY
+            ADVOCATE &amp; NOTARY PUBLIC
           </span>
         </div>
 
         {/* Headlines - Cormorant Garamond Font */}
         <div className="space-y-2 sm:space-y-3">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-[#0D1110] tracking-tight leading-[1.08] font-cormorant">
+          <div className="text-4xl sm:text-6xl lg:text-7xl font-bold text-[#0D1110] tracking-tight leading-[1.08] font-cormorant">
             Adv. P. R. Rathy
+          </div>
+          <h1 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6B7E74] font-serif italic tracking-wide">
+            Notary Public &amp; Advocate in Sultan Bathery, Wayanad
           </h1>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6B7E74] font-serif italic tracking-wide">
-            Advocate &amp; Notary
-          </h2>
         </div>
 
         {/* Decorative Divider */}

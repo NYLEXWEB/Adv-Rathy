@@ -24,9 +24,12 @@ export default function AboutContactSplit() {
                 <div className="relative shrink-0">
                   <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-2 border-[#6B7E74] p-1 bg-[#FAF8F3] shadow-md">
                     <img
-                      src="/profile.jpg"
-                      alt="Adv. P. R. Rathy Profile"
+                      src="/advocate-notary-pr-rathy-wayanad.webp"
+                      alt="Adv. P. R. Rathy - Advocate and Notary Public in Wayanad, Kerala"
                       className="w-full h-full rounded-full object-cover"
+                      width={128}
+                      height={128}
+                      loading="lazy"
                     />
                   </div>
                   <div className="absolute -bottom-1 -right-1 bg-[#0D1110] text-[#6B7E74] text-[9px] font-bold tracking-widest px-2 py-0.5 rounded-full border border-[#6B7E74]/40 font-sans uppercase shadow-xs">
@@ -115,9 +118,9 @@ export default function AboutContactSplit() {
                 <span className="text-xs font-semibold text-[#6B7E74] tracking-[0.2em] uppercase font-sans">
                   OFFICE &amp; CONTACT
                 </span>
-                <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-white tracking-wider uppercase">
+                <h2 className="font-cinzel text-2xl sm:text-3xl font-bold text-white tracking-wider uppercase">
                   DIRECT CONTACT
-                </h3>
+                </h2>
                 <div className="w-16 h-[2px] bg-[#6B7E74] mt-2"></div>
               </div>
 

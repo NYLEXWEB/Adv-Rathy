@@ -20,9 +20,9 @@ export default function ContactSection() {
   );
 
   const officePhotos = [
-    { src: '/image1.jpg', label: 'Office Premises', subtitle: 'Sultan Bathery' },
-    { src: '/imaage2.jpg', label: 'Consultation Room', subtitle: 'Wayanad District' },
-    { src: '/img3.jpg', label: 'Advocate Practice', subtitle: 'Near Court Complex' },
+    { src: '/notary-office-premises-sultan-bathery.webp', label: 'Notary Office Premises', subtitle: 'Sultan Bathery, Wayanad' },
+    { src: '/legal-consultation-room-wayanad.webp', label: 'Legal Consultation Room', subtitle: 'Wayanad District, Kerala' },
+    { src: '/advocate-office-practice-sultan-bathery.webp', label: 'Advocate Office Practice', subtitle: 'Near Court Complex' },
   ];
 
   const handleSubmit = (e) => {
@@ -65,8 +65,11 @@ export default function ContactSection() {
               >
                 <img
                   src={officePhotos[0].src}
-                  alt={officePhotos[0].label}
+                  alt={`${officePhotos[0].label} - Adv. P. R. Rathy Office`}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                  width={480}
+                  height={640}
+                  loading="lazy"
                 />
                 <div className="absolute inset-0 bg-gradient-to-t from-[#0D1110]/80 via-[#0D1110]/20 to-transparent group-hover:via-[#0D1110]/30 transition-all" />
                 <div className="absolute top-3 right-3 bg-[#0D1110]/70 text-[#6B7E74] p-2 rounded-full backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity">
@@ -97,8 +100,11 @@ export default function ContactSection() {
                   >
                     <img
                       src={photo.src}
-                      alt={photo.label}
+                      alt={`${photo.label} - Adv. P. R. Rathy`}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
+                      width={240}
+                      height={320}
+                      loading="lazy"
                     />
                     <div className="absolute inset-0 bg-gradient-to-t from-[#0D1110]/75 via-transparent to-transparent group-hover:via-[#0D1110]/20 transition-all" />
                     <div className="absolute top-2 right-2 bg-[#0D1110]/70 text-[#6B7E74] p-1.5 rounded-full backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity">
@@ -131,8 +137,11 @@ export default function ContactSection() {
                     >
                       <img
                         src={photo.src}
-                        alt={photo.label}
+                        alt={`${photo.label} - Advocate & Notary Office`}
                         className="w-full h-full object-cover"
+                        width={230}
+                        height={160}
+                        loading="lazy"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0D1110]/80 via-transparent to-transparent" />
                       <div className="absolute top-2 right-2 bg-[#0D1110]/70 text-[#6B7E74] p-1.5 rounded-full backdrop-blur-xs">
