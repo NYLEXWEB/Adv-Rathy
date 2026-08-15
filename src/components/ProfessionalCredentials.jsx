@@ -8,30 +8,35 @@ export default function ProfessionalCredentials() {
       label: 'ENROLLMENT NUMBER',
       value: 'K/000931/2004',
       sub: 'Bar Council of Kerala',
+      isNumber: true,
     },
     {
       icon: Briefcase,
       label: 'ENROLLMENT DATE',
       value: '21.11.2004',
       sub: '22 Years Standing',
+      isNumber: true,
     },
     {
       icon: GraduationCap,
       label: 'QUALIFICATION',
       value: 'B.A., LL.B.',
       sub: 'Professional Law Degree',
+      isNumber: false,
     },
     {
       icon: Scale,
       label: 'NOTARY APPOINTMENT',
       value: 'Govt. Authorized',
       sub: 'Notary Public Services',
+      isNumber: false,
     },
     {
       icon: MapPin,
       label: 'LOCATION & COURTS',
       value: 'Sultan Bathery',
       sub: 'Wayanad District Courts',
+      isNumber: false,
     },
   ];
 
@@ -57,7 +62,7 @@ export default function ProfessionalCredentials() {
                   <span className="text-[9px] font-bold text-[#6B7E74] tracking-widest font-sans uppercase block">
                     {item.label}
                   </span>
-                  <p className="font-cormorant text-xl font-bold text-[#0D1110] tracking-tight group-hover:text-[#6B7E74] transition-colors">
+                  <p className={`${item.isNumber ? 'font-sans font-bold' : 'font-cormorant font-bold'} text-lg sm:text-xl text-[#0D1110] tracking-tight group-hover:text-[#6B7E74] transition-colors mt-0.5`}>
                     {item.value}
                   </p>
                   <p className="text-[10px] text-[#565C58] font-sans font-medium">
