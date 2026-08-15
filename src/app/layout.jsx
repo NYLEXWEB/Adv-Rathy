@@ -6,6 +6,11 @@ export const metadata = {
   metadataBase: new URL(siteUrl),
   title: 'Notary Public & Advocate in Sultan Bathery, Wayanad | Adv. P. R. Rathy',
   description: 'Authorized Notary Public and Advocate services in Sultan Bathery, Wayanad by Adv. P. R. Rathy (22+ years experience). Document notarization, affidavits, power of attorney, and legal solutions.',
+  icons: {
+    icon: '/logo.png',
+    shortcut: '/logo.png',
+    apple: '/logo.png',
+  },
   alternates: {
     canonical: '/',
   },
@@ -99,6 +104,8 @@ export default function RootLayout({ children }) {
   return (
     <html lang="en" className="scroll-smooth">
       <head>
+        <link rel="icon" type="image/png" href="/logo.png" />
+        <link rel="apple-touch-icon" href="/logo.png" />
         <link rel="preconnect" href="https://fonts.googleapis.com" />
         <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="anonymous" />
         <link
@@ -116,4 +123,3 @@ export default function RootLayout({ children }) {
     </html>
   );
 }
-

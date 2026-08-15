@@ -27,6 +27,22 @@ export default function ContactSection() {
 
   const handleSubmit = (e) => {
     e.preventDefault();
+
+    const subject = encodeURIComponent(`Legal Inquiry: ${formData.matterType} - ${formData.name}`);
+    const body = encodeURIComponent(
+      `LEGAL CONSULTATION INQUIRY\n\n` +
+      `Full Name: ${formData.name}\n` +
+      `Phone Number: ${formData.phone}\n` +
+      `Email Address: ${formData.email}\n` +
+      `Practice Area Inquiry: ${formData.matterType}\n\n` +
+      `Description of Legal Inquiry:\n${formData.message}\n`
+    );
+
+    const mailtoUrl = `mailto:advpraarathy123@gmail.com?subject=${subject}&body=${body}`;
+
+    // Trigger device native email client with auto-filled form details
+    window.location.href = mailtoUrl;
+
     setSubmitted(true);
   };
 
