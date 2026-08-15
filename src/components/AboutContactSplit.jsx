@@ -1,147 +1,181 @@
 import React from 'react';
-import { GraduationCap, Briefcase, MapPin, Phone, Mail, Clock } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageSquare, Award, Calendar, GraduationCap, Briefcase } from 'lucide-react';
 
 export default function AboutContactSplit() {
+  const whatsappUrl = "https://wa.me/919745569225?text=Hello%20Adv.%20P.%20R.%20Rathy%2C%20I%20would%20like%20to%20make%20a%20legal%20enquiry.";
+
   return (
-    <section id="about" className="py-12 sm:py-16 bg-[#F8F6F0]">
+    <section id="about" className="py-16 sm:py-24 bg-[#FAF8F3] border-b border-[#E6E0D2]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="rounded-xl overflow-hidden border border-[#E6E0D2] shadow-sm grid grid-cols-1 lg:grid-cols-2">
+        
+        {/* Split Grid */}
+        <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
           
-          {/* LEFT SIDE: About Adv. P. R. Rathy (Ivory Light Panel) */}
-          <div className="bg-[#FAF8F3] p-8 sm:p-12 lg:p-14 flex flex-col justify-between space-y-8">
-            <div className="space-y-5">
-              {/* Heading */}
-              <div>
-                <h2 className="font-cinzel text-xl sm:text-2xl lg:text-3xl font-bold text-[#14201D] tracking-wider uppercase">
+          {/* Left Column: About Bio (Ivory Panel) */}
+          <div className="lg:col-span-7 bg-[#F8F6F0] border border-[#E6E0D2] rounded-2xl p-8 sm:p-10 lg:p-12 flex flex-col justify-between space-y-8 shadow-2xs">
+            <div className="space-y-6">
+              
+              {/* Tagline & Header */}
+              <div className="space-y-2">
+                <span className="text-xs font-semibold text-[#BE9A5A] tracking-[0.2em] uppercase font-sans">
+                  PROFESSIONAL PROFILE
+                </span>
+                <h2 className="font-cinzel text-3xl sm:text-4xl font-bold text-[#14201D] tracking-wider uppercase">
                   ABOUT ADV. P. R. RATHY
                 </h2>
-                <div className="w-12 h-[2px] bg-[#BE9A5A] mt-2"></div>
+                <div className="w-16 h-[2px] bg-[#BE9A5A] mt-2"></div>
               </div>
 
-              {/* Main Content Paragraphs */}
-              <p className="text-sm sm:text-base text-[#565C58] leading-relaxed font-sans">
-                Adv. P. R. Rathy is an Advocate and Notary with 22 years of professional practice in Civil and Criminal matters. He appears before courts across Wayanad District and various courts in Kerala.
+              {/* Verified Factual Bio */}
+              <p className="text-base sm:text-lg text-[#14201D] font-serif leading-relaxed">
+                Adv. P. R. Rathy is an Advocate and Notary with 22 years of professional legal practice. His practice includes Notary, Family Court, Criminal and Civil matters.
               </p>
 
-              <p className="text-xs sm:text-sm text-[#565C58] leading-relaxed font-sans">
-                Committed to providing reliable legal services with integrity, professionalism and client-focused approach.
+              <p className="text-xs sm:text-sm text-[#565C58] leading-relaxed font-sans font-normal">
+                Enrolled with the Bar Council of Kerala on 21.11.2004 under Enrollment No. K/000931/2004, Adv. P. R. Rathy provides legal assistance and notary services across Wayanad District and various courts in Kerala.
               </p>
-            </div>
 
-            {/* Bottom 2 Qualification & Experience Boxes */}
-            <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 pt-4 border-t border-[#E6E0D2]/60">
-              {/* Qualification Box */}
-              <div className="bg-[#F4EFE6] border border-[#E6E0D2] rounded-lg p-4 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-md bg-[#14201D] text-[#BE9A5A] flex items-center justify-center shrink-0">
-                  <GraduationCap className="w-5 h-5" />
+              {/* Verified Credentials Box */}
+              <div className="bg-[#FAF8F3] border border-[#E6E0D2] rounded-xl p-6 grid grid-cols-2 gap-4">
+                <div className="space-y-1">
+                  <div className="flex items-center gap-1.5 text-[#8C733E]">
+                    <GraduationCap className="w-4 h-4" />
+                    <span className="text-[10px] font-bold tracking-wider uppercase font-sans">QUALIFICATION</span>
+                  </div>
+                  <p className="font-serif text-base sm:text-lg font-bold text-[#14201D]">B.A., LL.B.</p>
                 </div>
-                <div>
-                  <span className="text-[10px] font-bold text-[#8C733E] uppercase tracking-wider block font-sans">
-                    QUALIFICATION
-                  </span>
-                  <span className="text-sm font-bold text-[#14201D] font-serif">
-                    B.A., LL.B.
-                  </span>
+
+                <div className="space-y-1">
+                  <div className="flex items-center gap-1.5 text-[#8C733E]">
+                    <Briefcase className="w-4 h-4" />
+                    <span className="text-[10px] font-bold tracking-wider uppercase font-sans">PRACTICE EXPERIENCE</span>
+                  </div>
+                  <p className="font-serif text-base sm:text-lg font-bold text-[#14201D]">22 Years</p>
+                </div>
+
+                <div className="space-y-1 pt-2 border-t border-[#E6E0D2]">
+                  <div className="flex items-center gap-1.5 text-[#8C733E]">
+                    <Award className="w-4 h-4" />
+                    <span className="text-[10px] font-bold tracking-wider uppercase font-sans">ENROLLMENT NO.</span>
+                  </div>
+                  <p className="font-serif text-sm sm:text-base font-bold text-[#14201D]">K/000931/2004</p>
+                </div>
+
+                <div className="space-y-1 pt-2 border-t border-[#E6E0D2]">
+                  <div className="flex items-center gap-1.5 text-[#8C733E]">
+                    <Calendar className="w-4 h-4" />
+                    <span className="text-[10px] font-bold tracking-wider uppercase font-sans">ENROLLMENT DATE</span>
+                  </div>
+                  <p className="font-serif text-sm sm:text-base font-bold text-[#14201D]">21.11.2004</p>
                 </div>
               </div>
 
-              {/* Experience Box */}
-              <div className="bg-[#F4EFE6] border border-[#E6E0D2] rounded-lg p-4 flex items-center gap-4">
-                <div className="w-10 h-10 rounded-md bg-[#14201D] text-[#BE9A5A] flex items-center justify-center shrink-0">
-                  <Briefcase className="w-5 h-5" />
-                </div>
-                <div>
-                  <span className="text-[10px] font-bold text-[#8C733E] uppercase tracking-wider block font-sans">
-                    EXPERIENCE
-                  </span>
-                  <span className="text-sm font-bold text-[#14201D] font-serif">
-                    22 Years
-                  </span>
-                </div>
-              </div>
             </div>
 
+            {/* Bottom Accent */}
+            <div className="flex items-center gap-3 text-[#BE9A5A]/60 pt-4 border-t border-[#E6E0D2]">
+              <div className="w-12 h-[1px] bg-[#BE9A5A]/50"></div>
+              <span className="text-xs font-serif italic text-[#8C733E]">Advocate &amp; Notary — Wayanad, Kerala</span>
+            </div>
           </div>
 
-          {/* RIGHT SIDE: Office & Contact (Deep Dark Panel) */}
-          <div className="bg-dark-panel p-8 sm:p-12 lg:p-14 text-white flex flex-col justify-between relative overflow-hidden">
+          {/* Right Column: Office & Direct Contact Panel (Dark Charcoal) */}
+          <div className="lg:col-span-5 bg-[#14201D] text-white border border-[#BE9A5A]/30 rounded-2xl p-8 sm:p-10 lg:p-12 flex flex-col justify-between space-y-8 shadow-md relative overflow-hidden">
             
-            {/* Subtle Lady Justice Line Art SVG Overlay */}
-            <div className="absolute right-[-20px] bottom-[-20px] w-64 h-80 opacity-15 pointer-events-none text-[#BE9A5A]">
-              <svg viewBox="0 0 200 300" fill="none" stroke="currentColor" strokeWidth="1.5">
-                {/* Lady Justice outline SVG representation */}
-                <path d="M100 20 C100 20, 105 35, 100 45 C95 55, 90 70, 95 85 C100 100, 110 120, 105 140" />
-                <circle cx="100" cy="30" r="12" />
-                {/* Scales */}
-                <path d="M60 70 L140 70 M60 70 L40 110 M60 70 L80 110 M140 70 L120 110 M140 70 L160 110" />
-                <path d="M35 110 Q60 120 85 110 M115 110 Q140 120 165 110" />
-                {/* Sword */}
-                <path d="M105 120 L105 240 M95 130 L115 130" />
+            {/* Background Line Art Overlay */}
+            <div className="absolute right-0 bottom-0 opacity-5 pointer-events-none">
+              <svg width="240" height="240" viewBox="0 0 100 100" fill="none" stroke="currentColor" className="text-[#BE9A5A]">
+                <path d="M50 10 L50 90 M20 40 L80 40 M25 70 L75 70" strokeWidth="2" />
               </svg>
             </div>
 
             <div className="space-y-6 relative z-10">
-              {/* Header with Gold Line */}
-              <div className="flex items-center gap-3">
-                <h2 className="font-cinzel text-xl sm:text-2xl lg:text-3xl font-bold text-white tracking-wider uppercase">
+              <div className="space-y-2">
+                <span className="text-xs font-semibold text-[#BE9A5A] tracking-[0.2em] uppercase font-sans">
                   OFFICE &amp; CONTACT
-                </h2>
-                <div className="h-[1px] w-12 bg-[#BE9A5A]"></div>
+                </span>
+                <h3 className="font-cinzel text-2xl sm:text-3xl font-bold text-white tracking-wider uppercase">
+                  DIRECT CONTACT
+                </h3>
+                <div className="w-16 h-[2px] bg-[#BE9A5A] mt-2"></div>
               </div>
 
-              {/* Contact Information List */}
-              <div className="space-y-5 pt-2 text-xs sm:text-sm">
-                
-                {/* Address */}
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-[#BE9A5A]/15 border border-[#BE9A5A]/30 flex items-center justify-center shrink-0 mt-0.5 text-[#BE9A5A]">
+              {/* Office Address */}
+              <div className="space-y-4 pt-2">
+                <div className="flex items-start gap-3.5">
+                  <div className="w-9 h-9 rounded-lg bg-[#BE9A5A]/20 text-[#BE9A5A] flex items-center justify-center shrink-0 border border-[#BE9A5A]/30 mt-0.5">
                     <MapPin className="w-4 h-4" />
                   </div>
-                  <div className="text-[#D0D4D2] leading-relaxed">
-                    <p className="font-medium text-white">O.K. Khalid Building,</p>
-                    <p>Near Court Complex,</p>
-                    <p>Sultan Bathery, Wayanad District,</p>
-                    <p>Kerala – 673592.</p>
+                  <div>
+                    <span className="text-[10px] font-bold text-[#BE9A5A] uppercase tracking-wider font-sans block mb-1">
+                      OFFICE ADDRESS
+                    </span>
+                    <p className="text-xs sm:text-sm text-[#D0D4D2] leading-relaxed font-sans">
+                      O.K. Khalid Building,<br />
+                      Near Court Complex, Sultan Bathery,<br />
+                      Wayanad District, Kerala – 673592
+                    </p>
                   </div>
                 </div>
 
-                {/* Phone */}
-                <div className="flex items-center gap-4">
-                  <div className="w-8 h-8 rounded-full bg-[#BE9A5A]/15 border border-[#BE9A5A]/30 flex items-center justify-center shrink-0 text-[#BE9A5A]">
+                {/* Phone & WhatsApp */}
+                <div className="flex items-start gap-3.5">
+                  <div className="w-9 h-9 rounded-lg bg-[#BE9A5A]/20 text-[#BE9A5A] flex items-center justify-center shrink-0 border border-[#BE9A5A]/30 mt-0.5">
                     <Phone className="w-4 h-4" />
                   </div>
-                  <a href="tel:9745569225" className="text-white hover:text-[#BE9A5A] font-mono text-sm tracking-wider transition-colors">
-                    97455 69225
-                  </a>
+                  <div>
+                    <span className="text-[10px] font-bold text-[#BE9A5A] uppercase tracking-wider font-sans block mb-1">
+                      PHONE &amp; WHATSAPP
+                    </span>
+                    <a href="tel:+919745569225" className="text-sm font-bold text-white font-mono hover:text-[#BE9A5A] transition-colors block">
+                      97455 69225
+                    </a>
+                  </div>
                 </div>
 
                 {/* Email */}
-                <div className="flex items-center gap-4">
-                  <div className="w-8 h-8 rounded-full bg-[#BE9A5A]/15 border border-[#BE9A5A]/30 flex items-center justify-center shrink-0 text-[#BE9A5A]">
+                <div className="flex items-start gap-3.5">
+                  <div className="w-9 h-9 rounded-lg bg-[#BE9A5A]/20 text-[#BE9A5A] flex items-center justify-center shrink-0 border border-[#BE9A5A]/30 mt-0.5">
                     <Mail className="w-4 h-4" />
                   </div>
-                  <a href="mailto:advpraarathy123@gmail.com" className="text-[#D0D4D2] hover:text-white transition-colors">
-                    advpraarathy123@gmail.com
-                  </a>
-                </div>
-
-                {/* Office Timings */}
-                <div className="flex items-start gap-4">
-                  <div className="w-8 h-8 rounded-full bg-[#BE9A5A]/15 border border-[#BE9A5A]/30 flex items-center justify-center shrink-0 mt-0.5 text-[#BE9A5A]">
-                    <Clock className="w-4 h-4" />
-                  </div>
-                  <div className="text-[#D0D4D2] leading-relaxed">
-                    <p className="font-medium text-white">Mon - Sat : 10:00 AM - 6:00 PM</p>
-                    <p className="text-xs text-[#9DA3A0]">(Sunday by Appointment)</p>
+                  <div>
+                    <span className="text-[10px] font-bold text-[#BE9A5A] uppercase tracking-wider font-sans block mb-1">
+                      EMAIL ADDRESS
+                    </span>
+                    <a href="mailto:advpraarathy123@gmail.com" className="text-xs sm:text-sm font-semibold text-white hover:text-[#BE9A5A] transition-colors break-all">
+                      advpraarathy123@gmail.com
+                    </a>
                   </div>
                 </div>
-
               </div>
+
+            </div>
+
+            {/* Quick Action CTAs: WhatsApp & Call */}
+            <div className="space-y-3 relative z-10 pt-4 border-t border-[#BE9A5A]/30">
+              <a
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-full inline-flex items-center justify-center gap-2.5 bg-[#BE9A5A] hover:bg-[#a8864b] text-[#14201D] px-6 py-3 rounded-lg text-xs font-bold tracking-wider uppercase transition-all shadow-sm font-sans"
+              >
+                <MessageSquare className="w-4 h-4" />
+                <span>WHATSAPP DIRECT</span>
+              </a>
+
+              <a
+                href="tel:+919745569225"
+                className="w-full inline-flex items-center justify-center gap-2.5 bg-transparent hover:bg-white/10 text-white px-6 py-3 rounded-lg text-xs font-semibold tracking-wider uppercase transition-all border border-[#BE9A5A]/50 font-sans"
+              >
+                <Phone className="w-4 h-4 text-[#BE9A5A]" />
+                <span>CALL 97455 69225</span>
+              </a>
             </div>
 
           </div>
 
         </div>
+
       </div>
     </section>
   );

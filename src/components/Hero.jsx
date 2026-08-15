@@ -1,13 +1,15 @@
 import React from 'react';
-import { Phone, Mail } from 'lucide-react';
+import { Phone, Mail, MessageSquare } from 'lucide-react';
 
 export default function Hero() {
+  const whatsappUrl = "https://wa.me/919745569225?text=Hello%20Adv.%20P.%20R.%20Rathy%2C%20I%20would%20like%20to%20make%20a%20legal%20enquiry.";
+
   return (
     <section 
       id="home" 
       className="relative w-full min-h-[580px] sm:min-h-[640px] lg:min-h-[720px] flex items-center overflow-hidden border-b border-[#E6E0D2]/50 bg-[#F8F6F0] -mt-20 sm:-mt-24 pt-24 sm:pt-28"
     >
-      {/* Hero Background Image - Desktop (Extends behind floating navbar) */}
+      {/* Desktop Background Image - Extends seamlessly behind navbar */}
       <div 
         className="absolute inset-0 hidden sm:block bg-no-repeat bg-center lg:bg-right bg-cover pointer-events-none transition-all duration-300"
         style={{
@@ -15,7 +17,7 @@ export default function Hero() {
         }}
       />
 
-      {/* Hero Background Image - Mobile (Extends behind floating navbar) */}
+      {/* Mobile Background Image - Extends seamlessly behind navbar */}
       <div 
         className="absolute inset-0 block sm:hidden bg-no-repeat bg-top bg-cover pointer-events-none"
         style={{
@@ -28,9 +30,9 @@ export default function Hero() {
         <div className="max-w-xl lg:max-w-2xl space-y-4 sm:space-y-6 text-center lg:text-left pt-8 sm:pt-4">
           
           {/* Small Editorial Tagline */}
-          <div className="flex items-center justify-center lg:justify-start gap-1.5 sm:gap-2 text-[#BE9A5A] text-[10px] sm:text-[12px] font-semibold tracking-[0.2em] sm:tracking-[0.25em] uppercase font-sans">
+          <div className="flex items-center justify-center lg:justify-start gap-1.5 sm:gap-2 text-[#BE9A5A] text-[10px] sm:text-[12px] font-semibold tracking-[0.25em] uppercase font-sans">
             <span>⟡</span>
-            <span>LEGAL ADVICE. TRUSTED REPRESENTATION.</span>
+            <span>ADVOCATE &amp; NOTARY</span>
             <span>⟡</span>
           </div>
 
@@ -51,29 +53,45 @@ export default function Hero() {
             <div className="w-12 sm:w-16 h-[1px] bg-gradient-to-r from-[#BE9A5A] via-[#BE9A5A] to-transparent"></div>
           </div>
 
-          {/* Description */}
-          <p className="text-sm sm:text-lg text-[#565C58] max-w-lg sm:max-w-xl mx-auto lg:mx-0 font-normal leading-relaxed font-sans px-2 sm:px-0">
-            22 years of dedicated legal practice in <br className="hidden sm:inline" />
-            Civil &amp; Criminal matters across Wayanad District <br className="hidden sm:inline" />
-            and various courts in Kerala.
-          </p>
+          {/* Supporting line & Practice Focus (NEW HIERARCHY: Notary · Family Court · Criminal · Civil) */}
+          <div className="space-y-2 max-w-lg sm:max-w-xl mx-auto lg:mx-0 font-sans">
+            <p className="text-base sm:text-xl text-[#14201D] font-bold tracking-wide">
+              22 Years of Legal Practice
+            </p>
+            <p className="text-xs sm:text-sm text-[#8C733E] font-bold tracking-[0.18em] uppercase font-sans">
+              Notary · Family Court · Criminal · Civil
+            </p>
+          </div>
 
-          {/* Action Buttons */}
-          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-2 sm:pt-3 px-4 sm:px-0">
+          {/* Action Buttons: CALL NOW | WHATSAPP | EMAIL */}
+          <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-3 sm:gap-4 pt-3 sm:pt-4 px-4 sm:px-0">
+            {/* CALL NOW */}
             <a
-              href="#contact"
+              href="tel:+919745569225"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#14201D] hover:bg-[#1C2D29] text-white px-7 py-3.5 rounded-md text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all duration-200 shadow-sm border border-[#BE9A5A]/40 group"
             >
               <Phone className="w-4 h-4 text-[#BE9A5A] group-hover:scale-110 transition-transform" />
-              <span>CONTACT NOW</span>
+              <span>CALL NOW</span>
             </a>
 
+            {/* WHATSAPP */}
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#FAF8F3] hover:bg-[#F2EBDC] text-[#14201D] px-7 py-3.5 rounded-md text-xs sm:text-sm font-bold tracking-wider uppercase transition-all duration-200 border border-[#BE9A5A]/60 shadow-2xs group"
+            >
+              <MessageSquare className="w-4 h-4 text-[#BE9A5A] group-hover:scale-110 transition-transform" />
+              <span>WHATSAPP</span>
+            </a>
+
+            {/* EMAIL */}
             <a
               href="mailto:advpraarathy123@gmail.com"
               className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#FAF8F3] hover:bg-[#F2EBDC] text-[#14201D] px-7 py-3.5 rounded-md text-xs sm:text-sm font-semibold tracking-wider uppercase transition-all duration-200 border border-[#BE9A5A]/60 shadow-2xs group"
             >
               <Mail className="w-4 h-4 text-[#14201D] group-hover:scale-110 transition-transform" />
-              <span>EMAIL US</span>
+              <span>EMAIL</span>
             </a>
           </div>
 

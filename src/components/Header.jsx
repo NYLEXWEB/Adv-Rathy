@@ -1,9 +1,11 @@
 import React, { useState } from 'react';
-import { Phone, Menu, X, Scale, Gavel } from 'lucide-react';
+import { Phone, Menu, X, Scale, MessageSquare } from 'lucide-react';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
   const [activeNav, setActiveNav] = useState('HOME');
+
+  const whatsappUrl = "https://wa.me/919745569225?text=Hello%20Adv.%20P.%20R.%20Rathy%2C%20I%20would%20like%20to%20make%20a%20legal%20enquiry.";
 
   const navItems = [
     { name: 'HOME', href: '#home' },
@@ -21,12 +23,8 @@ export default function Header() {
           
           {/* Brand / Official Advocate Logo Emblem */}
           <a href="#home" className="flex items-center gap-3 group">
-            {/* Official Advocate Emblem SVG Badge */}
             <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-[#14201D] border border-[#BE9A5A]/50 flex items-center justify-center relative shadow-sm group-hover:border-[#BE9A5A] transition-colors">
-              {/* Official Advocate Scale & Gavel Symbol */}
-              <div className="relative flex items-center justify-center text-[#BE9A5A]">
-                <Scale className="w-5 h-5 sm:w-6 sm:h-6" strokeWidth={1.6} />
-              </div>
+              <Scale className="w-5 h-5 sm:w-6 sm:h-6 text-[#BE9A5A]" strokeWidth={1.6} />
             </div>
 
             <div className="flex flex-col">
@@ -60,25 +58,29 @@ export default function Header() {
             })}
           </nav>
 
-          {/* Right CTA Button */}
+          {/* Right Header CTA - WhatsApp */}
           <div className="hidden sm:flex items-center">
             <a
-              href="tel:9745569225"
-              className="flex items-center gap-2 bg-[#14201D] hover:bg-[#1C2D29] text-white px-4 py-2 sm:py-2.5 rounded-lg text-xs font-medium tracking-wider transition-all duration-200 border border-[#BE9A5A]/40 shadow-2xs hover:border-[#BE9A5A]"
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="flex items-center gap-2 bg-[#14201D] hover:bg-[#1C2D29] text-white px-4 py-2 sm:py-2.5 rounded-lg text-xs font-medium tracking-wider transition-all duration-200 border border-[#BE9A5A]/40 shadow-2xs hover:border-[#BE9A5A] group"
             >
-              <Phone className="w-3.5 h-3.5 text-[#BE9A5A]" fill="#BE9A5A" />
-              <span className="font-mono text-xs sm:text-[13px] tracking-wider">97455 69225</span>
+              <MessageSquare className="w-3.5 h-3.5 text-[#BE9A5A] group-hover:scale-110 transition-transform" />
+              <span className="font-sans font-bold tracking-wider text-xs uppercase text-white">WHATSAPP</span>
             </a>
           </div>
 
           {/* Mobile Hamburger Menu Button */}
           <div className="flex lg:hidden items-center gap-2.5">
             <a
-              href="tel:9745569225"
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
               className="flex sm:hidden items-center justify-center w-8 h-8 rounded-lg bg-[#14201D] text-[#BE9A5A] border border-[#BE9A5A]/30"
-              aria-label="Call Now"
+              aria-label="WhatsApp"
             >
-              <Phone className="w-3.5 h-3.5" />
+              <MessageSquare className="w-3.5 h-3.5" />
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
@@ -110,10 +112,19 @@ export default function Header() {
                 </a>
               ))}
             </div>
-            <div className="pt-2">
+            <div className="pt-2 flex flex-col gap-2">
               <a
-                href="tel:9745569225"
-                className="flex items-center justify-center gap-2 bg-[#14201D] text-white py-2.5 rounded-lg text-xs font-medium tracking-wider w-full border border-[#BE9A5A]/30"
+                href={whatsappUrl}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="flex items-center justify-center gap-2 bg-[#14201D] text-white py-2.5 rounded-lg text-xs font-bold tracking-wider w-full border border-[#BE9A5A]/30 uppercase"
+              >
+                <MessageSquare className="w-3.5 h-3.5 text-[#BE9A5A]" />
+                <span>WhatsApp: 97455 69225</span>
+              </a>
+              <a
+                href="tel:+919745569225"
+                className="flex items-center justify-center gap-2 bg-[#FAF8F3] text-[#14201D] py-2.5 rounded-lg text-xs font-bold tracking-wider w-full border border-[#E6E0D2] uppercase"
               >
                 <Phone className="w-3.5 h-3.5 text-[#BE9A5A]" />
                 <span>Call: 97455 69225</span>

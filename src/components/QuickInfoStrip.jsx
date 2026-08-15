@@ -1,62 +1,69 @@
 import React from 'react';
-import { Landmark, Scale, MapPin, FileCheck } from 'lucide-react';
+import { Award, FileText, HeartHandshake, Scale } from 'lucide-react';
 
 export default function QuickInfoStrip() {
-  const infoItems = [
+  const items = [
     {
-      icon: Landmark,
-      titleLine1: '22 YEARS',
-      titleLine2: 'OF EXPERIENCE',
-      description: 'Over two decades of professional legal practice and court experience.',
+      number: '22 YEARS',
+      label: 'LEGAL PRACTICE',
+      desc: '22 years of professional legal practice.',
+      icon: Award,
     },
     {
+      number: 'NOTARY',
+      label: 'PUBLIC',
+      desc: 'Authorized Notary Public.',
+      icon: FileText,
+      featured: true,
+    },
+    {
+      number: 'FAMILY COURT',
+      label: 'PRACTICE',
+      desc: 'Practice relating to Family Court matters.',
+      icon: HeartHandshake,
+    },
+    {
+      number: 'CIVIL & CRIMINAL',
+      label: 'MATTERS',
+      desc: 'Civil and Criminal court matters.',
       icon: Scale,
-      titleLine1: 'CIVIL & CRIMINAL',
-      titleLine2: 'MATTERS',
-      description: 'Handling a wide range of civil and criminal legal matters with dedication.',
-    },
-    {
-      icon: MapPin,
-      titleLine1: 'COURTS ACROSS',
-      titleLine2: 'KERALA',
-      description: 'Practice in courts across Wayanad District and various courts in Kerala.',
-    },
-    {
-      icon: FileCheck,
-      titleLine1: 'NOTARY',
-      titleLine2: 'PUBLIC',
-      description: 'Authorized Notary Public offering a wide range of notarial services.',
     },
   ];
 
   return (
-    <section className="bg-[#FAF8F3] border-y border-[#E6E0D2] py-10 sm:py-14 relative">
+    <section className="py-12 sm:py-16 bg-[#F8F6F0] border-b border-[#E6E0D2]">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8 lg:gap-0 divide-y lg:divide-y-0 lg:divide-x divide-[#E6E0D2]">
-          {infoItems.map((item, index) => {
-            const IconComponent = item.icon;
+        <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6">
+          {items.map((item, index) => {
+            const IconComp = item.icon;
             return (
               <div
                 key={index}
-                className="flex flex-col items-center text-center px-4 sm:px-6 pt-6 lg:pt-0 first:pt-0 group"
+                className={`p-6 rounded-xl border flex flex-col items-center text-center transition-all ${
+                  item.featured
+                    ? 'bg-[#14201D] text-white border-[#BE9A5A]/50 shadow-sm'
+                    : 'bg-[#FAF8F3] text-[#14201D] border-[#E6E0D2]'
+                }`}
               >
-                {/* Circular Dark Icon Badge */}
-                <div className="w-14 h-14 sm:w-16 sm:h-16 rounded-full bg-[#14201D] flex items-center justify-center mb-4 shadow-sm border border-[#BE9A5A]/30 group-hover:scale-105 group-hover:border-[#BE9A5A] transition-all duration-300">
-                  <IconComponent className="w-7 h-7 sm:w-8 sm:h-8 text-[#BE9A5A]" strokeWidth={1.5} />
+                <div
+                  className={`w-12 h-12 rounded-full flex items-center justify-center mb-4 ${
+                    item.featured
+                      ? 'bg-[#BE9A5A]/20 text-[#BE9A5A] border border-[#BE9A5A]/40'
+                      : 'bg-[#F4EFE6] text-[#BE9A5A] border border-[#BE9A5A]/30'
+                  }`}
+                >
+                  <IconComp className="w-6 h-6" strokeWidth={1.5} />
                 </div>
 
-                {/* Heading */}
-                <h3 className="font-serif text-lg sm:text-xl font-bold text-[#14201D] tracking-wider leading-snug uppercase mb-1">
-                  <span>{item.titleLine1}</span> <br />
-                  <span>{item.titleLine2}</span>
+                <h3 className={`font-serif text-lg font-bold uppercase tracking-wider ${item.featured ? 'text-white' : 'text-[#14201D]'}`}>
+                  {item.number}
                 </h3>
+                <span className={`text-[10px] font-bold tracking-[0.2em] uppercase font-sans mb-2 ${item.featured ? 'text-[#BE9A5A]' : 'text-[#8C733E]'}`}>
+                  {item.label}
+                </span>
 
-                {/* Decorative underline */}
-                <div className="w-8 h-[2px] bg-[#BE9A5A]/60 my-2.5 group-hover:w-12 transition-all duration-300"></div>
-
-                {/* Supporting Text */}
-                <p className="text-xs sm:text-sm text-[#565C58] max-w-xs leading-relaxed font-sans">
-                  {item.description}
+                <p className={`text-xs leading-relaxed font-sans ${item.featured ? 'text-[#D0D4D2]' : 'text-[#565C58]'}`}>
+                  {item.desc}
                 </p>
               </div>
             );

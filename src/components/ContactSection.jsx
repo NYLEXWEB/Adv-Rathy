@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Mail, Navigation, Send, CheckCircle2 } from 'lucide-react';
+import { Phone, Mail, Navigation, Send, CheckCircle2, MessageSquare } from 'lucide-react';
 
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
@@ -7,10 +7,11 @@ export default function ContactSection() {
     name: '',
     phone: '',
     email: '',
-    matterType: 'Civil Matter',
+    matterType: 'Notary Service',
     message: '',
   });
 
+  const whatsappUrl = "https://wa.me/919745569225?text=Hello%20Adv.%20P.%20R.%20Rathy%2C%20I%20would%20like%20to%20make%20a%20legal%20enquiry.";
   const mapAddressQuery = encodeURIComponent(
     'O.K. Khalid Building, Near Court Complex, Sultan Bathery, Wayanad District, Kerala 673592'
   );
@@ -24,16 +25,16 @@ export default function ContactSection() {
     <section id="contact" className="py-16 sm:py-24 bg-[#FAF8F3] border-t border-[#E6E0D2] relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Form Container Card */}
+        {/* Contact Container Card */}
         <div className="max-w-4xl mx-auto bg-[#F8F6F0] border border-[#E6E0D2] rounded-2xl p-8 sm:p-12 lg:p-14 shadow-xs space-y-8 relative overflow-hidden">
           
           {/* Header */}
           <div className="text-center space-y-3">
             <span className="text-xs font-semibold text-[#BE9A5A] tracking-[0.2em] uppercase font-sans">
-              ⟡ INQUIRE &amp; CONSULT ⟡
+              ⟡ DIRECT LEGAL INQUIRY ⟡
             </span>
             <h2 className="font-cinzel text-3xl sm:text-4xl font-bold text-[#14201D] tracking-wider uppercase">
-              LEGAL CONSULTATION FORM
+              OFFICE &amp; CONTACT
             </h2>
             <p className="font-serif text-base sm:text-lg text-[#BE9A5A] italic">
               Send a direct legal inquiry to Adv. P. R. Rathy
@@ -41,7 +42,7 @@ export default function ContactSection() {
             <div className="w-16 h-[2px] bg-[#BE9A5A] mx-auto"></div>
           </div>
 
-          {/* Form / Submitted Success Message */}
+          {/* Contact Form */}
           {submitted ? (
             <div className="bg-[#FAF8F3] border border-[#BE9A5A]/50 rounded-xl p-8 text-center space-y-4 my-6">
               <div className="w-14 h-14 rounded-full bg-[#14201D] text-[#BE9A5A] flex items-center justify-center mx-auto border border-[#BE9A5A]/40">
@@ -50,8 +51,8 @@ export default function ContactSection() {
               <h3 className="font-serif text-2xl font-bold text-[#14201D]">
                 Inquiry Submitted Successfully
               </h3>
-              <p className="text-sm text-[#565C58] max-w-md mx-auto leading-relaxed">
-                Thank you for contacting Adv. P. R. Rathy. Our office will review your inquiry and get back to you shortly.
+              <p className="text-sm text-[#565C58] max-w-md mx-auto leading-relaxed font-sans">
+                Thank you for contacting Adv. P. R. Rathy. Our office will review your legal inquiry and respond to you shortly.
               </p>
               <button
                 onClick={() => setSubmitted(false)}
@@ -109,20 +110,20 @@ export default function ContactSection() {
                   />
                 </div>
 
-                {/* Legal Matter Type */}
+                {/* Practice Area Selection */}
                 <div className="space-y-2">
                   <label className="block text-xs font-bold text-[#14201D] uppercase tracking-wider font-sans">
-                    Legal Matter Type *
+                    Practice Area Inquiry *
                   </label>
                   <select
                     value={formData.matterType}
                     onChange={(e) => setFormData({ ...formData, matterType: e.target.value })}
                     className="w-full bg-[#FAF8F3] border border-[#E6E0D2] focus:border-[#BE9A5A] rounded-lg px-4 py-3 text-sm text-[#14201D] focus:outline-none transition-colors"
                   >
-                    <option value="Civil Matter">Civil Matter</option>
-                    <option value="Criminal Matter">Criminal Matter</option>
                     <option value="Notary Service">Notary Public Service</option>
-                    <option value="General Consultation">General Legal Inquiry</option>
+                    <option value="Family Court">Family Court Practice</option>
+                    <option value="Criminal Matter">Criminal Proceedings</option>
+                    <option value="Civil Matter">Civil Litigation</option>
                   </select>
                 </div>
 
@@ -131,12 +132,12 @@ export default function ContactSection() {
               {/* Message Details */}
               <div className="space-y-2">
                 <label className="block text-xs font-bold text-[#14201D] uppercase tracking-wider font-sans">
-                  Brief Description of Legal Matter *
+                  Brief Description of Legal Inquiry *
                 </label>
                 <textarea
                   required
                   rows={4}
-                  placeholder="Describe your legal matter or inquiry details here..."
+                  placeholder="Describe your legal matter or notary inquiry details..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
                   className="w-full bg-[#FAF8F3] border border-[#E6E0D2] focus:border-[#BE9A5A] rounded-lg px-4 py-3 text-sm text-[#14201D] focus:outline-none transition-colors resize-y"
@@ -156,32 +157,46 @@ export default function ContactSection() {
             </form>
           )}
 
-          {/* Quick Direct Actions */}
-          <div className="flex flex-col sm:flex-row items-center justify-center gap-4 pt-6 border-t border-[#E6E0D2]">
+          {/* Action CTAs: CALL NOW | WHATSAPP | EMAIL | GET DIRECTIONS */}
+          <div className="grid grid-cols-2 sm:grid-cols-4 gap-3 pt-6 border-t border-[#E6E0D2]">
+            {/* CALL NOW */}
             <a
-              href="tel:9745569225"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#FAF8F3] hover:bg-[#F2EBDC] text-[#14201D] px-6 py-2.5 rounded-md text-xs font-semibold tracking-wider uppercase transition-all border border-[#BE9A5A]/50"
+              href="tel:+919745569225"
+              className="inline-flex items-center justify-center gap-2 bg-[#14201D] hover:bg-[#1C2D29] text-white py-3 rounded-lg text-xs font-semibold tracking-wider uppercase transition-all border border-[#BE9A5A]/30 shadow-2xs font-sans"
             >
               <Phone className="w-3.5 h-3.5 text-[#BE9A5A]" />
-              <span>CALL NOW: 97455 69225</span>
+              <span>CALL NOW</span>
             </a>
 
+            {/* WHATSAPP */}
+            <a
+              href={whatsappUrl}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center justify-center gap-2 bg-[#FAF8F3] hover:bg-[#F2EBDC] text-[#14201D] py-3 rounded-lg text-xs font-bold tracking-wider uppercase transition-all border border-[#BE9A5A]/60 shadow-2xs font-sans"
+            >
+              <MessageSquare className="w-3.5 h-3.5 text-[#BE9A5A]" />
+              <span>WHATSAPP</span>
+            </a>
+
+            {/* EMAIL */}
             <a
               href="mailto:advpraarathy123@gmail.com"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#FAF8F3] hover:bg-[#F2EBDC] text-[#14201D] px-6 py-2.5 rounded-md text-xs font-semibold tracking-wider uppercase transition-all border border-[#BE9A5A]/50"
+              className="inline-flex items-center justify-center gap-2 bg-[#FAF8F3] hover:bg-[#F2EBDC] text-[#14201D] py-3 rounded-lg text-xs font-semibold tracking-wider uppercase transition-all border border-[#BE9A5A]/60 shadow-2xs font-sans"
             >
               <Mail className="w-3.5 h-3.5 text-[#14201D]" />
-              <span>EMAIL DIRECTLY</span>
+              <span>EMAIL</span>
             </a>
 
+            {/* GET DIRECTIONS */}
             <a
               href={`https://www.google.com/maps/search/?api=1&query=${mapAddressQuery}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="w-full sm:w-auto inline-flex items-center justify-center gap-2 bg-[#FAF8F3] hover:bg-[#F2EBDC] text-[#14201D] px-6 py-2.5 rounded-md text-xs font-semibold tracking-wider uppercase transition-all border border-[#BE9A5A]/50"
+              className="inline-flex items-center justify-center gap-2 bg-[#FAF8F3] hover:bg-[#F2EBDC] text-[#14201D] py-3 rounded-lg text-xs font-semibold tracking-wider uppercase transition-all border border-[#BE9A5A]/60 shadow-2xs font-sans"
             >
               <Navigation className="w-3.5 h-3.5 text-[#BE9A5A]" />
-              <span>GET DIRECTIONS</span>
+              <span>DIRECTIONS</span>
             </a>
           </div>
 
