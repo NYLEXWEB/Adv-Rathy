@@ -18,7 +18,7 @@ export default function Header() {
 
   return (
     <div className="sticky top-3 sm:top-4 z-50 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto transition-all">
-      <header className="bg-[#FAF8F3]/95 backdrop-blur-md border border-[#E6E0D2] rounded-xl sm:rounded-2xl shadow-md transition-all">
+      <header className="bg-[#F8F6F0]/90 backdrop-blur-md border border-[#E6E0D2] rounded-xl sm:rounded-2xl shadow-sm transition-all">
         <div className="px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
           
           {/* Brand / Official Advocate Logo Image */}
@@ -28,7 +28,7 @@ export default function Header() {
             </div>
 
             <div className="flex flex-col">
-              <span className="font-cinzel text-base sm:text-lg font-bold text-[#0D1110] tracking-wider leading-tight">
+              <span className="font-cormorant text-lg sm:text-xl font-bold text-[#0D1110] tracking-wider leading-tight">
                 ADV. P. R. RATHY
               </span>
               <span className="text-[9px] sm:text-[10px] font-semibold text-[#6B7E74] tracking-[0.2em] font-sans uppercase">
@@ -85,7 +85,7 @@ export default function Header() {
 
         {/* Mobile Drawer Dropdown */}
         {mobileMenuOpen && (
-          <div className="lg:hidden bg-[#FAF8F3] border-t border-[#E6E0D2] px-6 py-5 rounded-b-xl shadow-lg space-y-4 animate-in fade-in duration-200">
+          <div className="lg:hidden bg-[#F8F6F0] border-t border-[#E6E0D2] px-6 py-5 rounded-b-xl shadow-lg space-y-4 animate-in fade-in duration-200">
             <div className="flex flex-col space-y-2.5">
               {navItems.map((item) => (
                 <a
@@ -115,7 +115,7 @@ export default function Header() {
               </a>
               <a
                 href="tel:+919745569225"
-                className="flex items-center justify-center gap-2 bg-[#FAF8F3] text-[#0D1110] py-2.5 rounded-lg text-xs font-bold tracking-wider w-full border border-[#E6E0D2] uppercase"
+                className="flex items-center justify-center gap-2 bg-[#F8F6F0] text-[#0D1110] py-2.5 rounded-lg text-xs font-bold tracking-wider w-full border border-[#E6E0D2] uppercase"
               >
                 <Phone className="w-3.5 h-3.5 text-[#6B7E74]" />
                 <span>Call: 97455 69225</span>

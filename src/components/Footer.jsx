@@ -18,16 +18,16 @@ export default function Footer() {
                 <img src="/logo.png" alt="Adv. P. R. Rathy Logo" className="w-full h-full object-contain" />
               </div>
               <div className="flex flex-col">
-                <span className="font-cinzel text-lg font-bold text-white tracking-wider leading-tight">
+                <span className="font-cormorant text-xl font-bold text-white tracking-wider leading-tight">
                   ADV. P. R. RATHY
                 </span>
-                <span className="text-[10px] font-bold text-[#6B7E74] tracking-[0.2em] uppercase">
+                <span className="text-[10px] font-bold text-[#6B7E74] tracking-[0.2em] uppercase font-sans">
                   ADVOCATE &amp; NOTARY
                 </span>
               </div>
             </a>
 
-            <p className="text-xs text-[#D0D4D2] leading-relaxed max-w-sm">
+            <p className="text-xs text-[#D0D4D2] leading-relaxed max-w-sm font-sans">
               22 years of legal practice in Notary Public, Family Court, Criminal, and Civil matters across Wayanad District and Kerala courts.
             </p>
 
@@ -89,7 +89,7 @@ export default function Footer() {
         {/* Bottom Copyright */}
         <div className="flex flex-col sm:flex-row items-center justify-between gap-4 text-[11px] text-[#8C9490]">
           <p>© {new Date().getFullYear()} Adv. P. R. Rathy (B.A., LL.B.). All rights reserved.</p>
-          <p className="font-serif italic text-[#6B7E74]">Advocate &amp; Notary — Sultan Bathery, Wayanad</p>
+          <p className="font-cormorant italic text-[#6B7E74] text-xs">Advocate &amp; Notary — Sultan Bathery, Wayanad</p>
         </div>
 
       </div>

@@ -9,6 +9,12 @@ export default function Hero() {
       id="home" 
       className="relative w-full py-16 sm:py-24 lg:py-28 bg-[#F8F6F0] border-b border-[#E6E0D2] overflow-hidden"
     >
+      {/* Hero Section Background Image Overlay */}
+      <div 
+        className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15 pointer-events-none mix-blend-multiply transition-opacity duration-300"
+        style={{ backgroundImage: "url('/hero%20section.jpg')" }}
+      />
+
       {/* Subtle Paper Texture & Soft Radial Warm Glow */}
       <div className="absolute inset-0 bg-[radial-gradient(#6B7E74_1px,transparent_1px)] [background-size:24px_24px] opacity-15 pointer-events-none" />
 
@@ -16,19 +22,19 @@ export default function Hero() {
       <div className="relative z-10 max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center space-y-6 sm:space-y-8">
         
         {/* Top Legal Scales Badge */}
-        <div className="inline-flex items-center justify-center gap-2 bg-[#FAF8F3] border border-[#6B7E74]/50 px-4 py-1.5 rounded-full shadow-2xs">
+        <div className="inline-flex items-center justify-center gap-2 bg-[#FAF8F3]/90 border border-[#6B7E74]/50 px-4 py-1.5 rounded-full shadow-2xs backdrop-blur-xs">
           <Scale className="w-4 h-4 text-[#6B7E74]" strokeWidth={1.6} />
-          <span className="text-[10px] sm:text-xs font-bold text-[#6B7E74] tracking-[0.25em] uppercase font-sans">
+          <span className="text-[10px] sm:text-xs font-bold text-[#6B7E74] tracking-[0.2em] uppercase font-sans">
             ADVOCATE &amp; NOTARY
           </span>
         </div>
 
-        {/* Headlines */}
+        {/* Headlines - Cormorant Garamond Font */}
         <div className="space-y-2 sm:space-y-3">
-          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-[#0D1110] tracking-tight leading-[1.08] font-serif">
+          <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-[#0D1110] tracking-tight leading-[1.08] font-cormorant">
             Adv. P. R. Rathy
           </h1>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-normal text-[#6B7E74] font-serif italic tracking-wide">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6B7E74] font-cormorant italic tracking-wide">
             Advocate &amp; Notary
           </h2>
         </div>
@@ -40,12 +46,12 @@ export default function Hero() {
           <div className="w-16 sm:w-24 h-[1px] bg-gradient-to-r from-[#6B7E74] via-[#6B7E74] to-transparent"></div>
         </div>
 
-        {/* Practice Experience & Priority Order */}
+        {/* Practice Experience & Priority Order - Cormorant Garamond Font */}
         <div className="space-y-2 max-w-2xl mx-auto font-sans">
-          <p className="text-lg sm:text-2xl font-bold text-[#0D1110] tracking-wide font-serif">
+          <p className="text-xl sm:text-3xl font-bold text-[#0D1110] tracking-wide font-cormorant">
             22 Years of Legal Practice
           </p>
-          <div className="inline-block bg-[#F4EFE6] border border-[#E6E0D2] px-4 py-2 rounded-xl">
+          <div className="inline-block bg-[#F4EFE6]/90 border border-[#E6E0D2] px-4 py-2 rounded-xl backdrop-blur-xs">
             <p className="text-xs sm:text-sm text-[#4F6157] font-bold tracking-[0.2em] uppercase font-sans">
               Notary · Family Court · Criminal · Civil
             </p>

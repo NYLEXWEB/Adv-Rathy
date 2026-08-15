@@ -37,7 +37,7 @@ export default function AboutContactSplit() {
                   <span className="text-xs font-semibold text-[#6B7E74] tracking-[0.2em] uppercase font-sans">
                     PROFESSIONAL PROFILE
                   </span>
-                  <h2 className="font-cinzel text-3xl sm:text-4xl font-bold text-[#0D1110] tracking-wider uppercase">
+                  <h2 className="font-cormorant text-3xl sm:text-4xl lg:text-5xl font-bold text-[#0D1110] tracking-wider uppercase">
                     ABOUT ADV. P. R. RATHY
                   </h2>
                   <div className="w-16 h-[2px] bg-[#6B7E74] mx-auto sm:mx-0 mt-2"></div>
@@ -46,7 +46,7 @@ export default function AboutContactSplit() {
               </div>
 
               {/* Verified Factual Bio */}
-              <p className="text-base sm:text-lg text-[#0D1110] font-serif leading-relaxed">
+              <p className="text-lg sm:text-xl text-[#0D1110] font-cormorant leading-relaxed">
                 Adv. P. R. Rathy is an Advocate and Notary with 22 years of professional legal practice. His practice includes Notary, Family Court, Criminal and Civil matters.
               </p>
 
@@ -61,7 +61,7 @@ export default function AboutContactSplit() {
                     <GraduationCap className="w-4 h-4" />
                     <span className="text-[10px] font-bold tracking-wider uppercase font-sans">QUALIFICATION</span>
                   </div>
-                  <p className="font-serif text-base sm:text-lg font-bold text-[#0D1110]">B.A., LL.B.</p>
+                  <p className="font-cormorant text-xl sm:text-2xl font-bold text-[#0D1110]">B.A., LL.B.</p>
                 </div>
 
                 <div className="space-y-1">
@@ -69,7 +69,7 @@ export default function AboutContactSplit() {
                     <Briefcase className="w-4 h-4" />
                     <span className="text-[10px] font-bold tracking-wider uppercase font-sans">PRACTICE EXPERIENCE</span>
                   </div>
-                  <p className="font-serif text-base sm:text-lg font-bold text-[#0D1110]">22 Years</p>
+                  <p className="font-cormorant text-xl sm:text-2xl font-bold text-[#0D1110]">22 Years</p>
                 </div>
 
                 <div className="space-y-1 pt-2 border-t border-[#E6E0D2]">
@@ -77,7 +77,7 @@ export default function AboutContactSplit() {
                     <Award className="w-4 h-4" />
                     <span className="text-[10px] font-bold tracking-wider uppercase font-sans">ENROLLMENT NO.</span>
                   </div>
-                  <p className="font-serif text-sm sm:text-base font-bold text-[#0D1110]">K/000931/2004</p>
+                  <p className="font-cormorant text-base sm:text-lg font-bold text-[#0D1110]">K/000931/2004</p>
                 </div>
 
                 <div className="space-y-1 pt-2 border-t border-[#E6E0D2]">
@@ -85,7 +85,7 @@ export default function AboutContactSplit() {
                     <Calendar className="w-4 h-4" />
                     <span className="text-[10px] font-bold tracking-wider uppercase font-sans">ENROLLMENT DATE</span>
                   </div>
-                  <p className="font-serif text-sm sm:text-base font-bold text-[#0D1110]">21.11.2004</p>
+                  <p className="font-cormorant text-base sm:text-lg font-bold text-[#0D1110]">21.11.2004</p>
                 </div>
               </div>
 
@@ -94,7 +94,7 @@ export default function AboutContactSplit() {
             {/* Bottom Accent */}
             <div className="flex items-center gap-3 text-[#6B7E74]/60 pt-4 border-t border-[#E6E0D2]">
               <div className="w-12 h-[1px] bg-[#6B7E74]/50"></div>
-              <span className="text-xs font-serif italic text-[#4F6157]">Advocate &amp; Notary — Wayanad, Kerala</span>
+              <span className="text-xs font-cormorant italic text-[#4F6157]">Advocate &amp; Notary — Wayanad, Kerala</span>
             </div>
           </div>
 
