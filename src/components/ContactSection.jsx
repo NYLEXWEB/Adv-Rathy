@@ -1,8 +1,9 @@
 import React, { useState } from 'react';
-import { Phone, Mail, Navigation, Send, CheckCircle2, MessageSquare, MapPin, Building, ShieldCheck } from 'lucide-react';
+import { Phone, Mail, Navigation, Send, CheckCircle2, MessageSquare, MapPin, Building, ShieldCheck, X, ZoomIn } from 'lucide-react';
 
 export default function ContactSection() {
   const [submitted, setSubmitted] = useState(false);
+  const [selectedImage, setSelectedImage] = useState(null);
   const [formData, setFormData] = useState({
     name: '',
     phone: '',
@@ -52,17 +53,23 @@ export default function ContactSection() {
           {/* LEFT SIDE: Modern Unique 3-Image Gallery + Quick Contact Info */}
           <div className="lg:col-span-5 space-y-6">
             
-            {/* Desktop Unique Gallery Layout (Stacked & Staggered Modern Cards) */}
+            {/* Desktop Unique Gallery Layout (Stacked & Staggered Modern Cards with Click-to-Popup) */}
             <div className="hidden sm:flex flex-col gap-4">
               
               {/* Main Featured Large Image */}
-              <div className="relative h-56 lg:h-64 rounded-2xl overflow-hidden border border-[#E6E0D2] shadow-sm group">
+              <div 
+                onClick={() => setSelectedImage(officePhotos[0])}
+                className="relative h-56 lg:h-64 rounded-2xl overflow-hidden border border-[#E6E0D2] shadow-sm group cursor-pointer"
+              >
                 <img
                   src={officePhotos[0].src}
                   alt={officePhotos[0].label}
                   className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                 />
-                <div className="absolute inset-0 bg-gradient-to-t from-[#0D1110]/80 via-[#0D1110]/20 to-transparent" />
+                <div className="absolute inset-0 bg-gradient-to-t from-[#0D1110]/80 via-[#0D1110]/20 to-transparent group-hover:via-[#0D1110]/30 transition-all" />
+                <div className="absolute top-3 right-3 bg-[#0D1110]/70 text-[#6B7E74] p-2 rounded-full backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                  <ZoomIn className="w-4 h-4" />
+                </div>
                 <div className="absolute bottom-4 left-4 right-4 flex items-center justify-between text-white">
                   <div>
                     <span className="text-[10px] font-bold text-[#6B7E74] tracking-widest uppercase block font-sans">
@@ -83,14 +90,18 @@ export default function ContactSection() {
                 {officePhotos.slice(1).map((photo, index) => (
                   <div
                     key={index}
-                    className="relative h-36 lg:h-40 rounded-xl overflow-hidden border border-[#E6E0D2] shadow-2xs group"
+                    onClick={() => setSelectedImage(photo)}
+                    className="relative h-36 lg:h-40 rounded-xl overflow-hidden border border-[#E6E0D2] shadow-2xs group cursor-pointer"
                   >
                     <img
                       src={photo.src}
                       alt={photo.label}
                       className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-500"
                     />
-                    <div className="absolute inset-0 bg-gradient-to-t from-[#0D1110]/75 via-transparent to-transparent" />
+                    <div className="absolute inset-0 bg-gradient-to-t from-[#0D1110]/75 via-transparent to-transparent group-hover:via-[#0D1110]/20 transition-all" />
+                    <div className="absolute top-2 right-2 bg-[#0D1110]/70 text-[#6B7E74] p-1.5 rounded-full backdrop-blur-xs opacity-0 group-hover:opacity-100 transition-opacity">
+                      <ZoomIn className="w-3.5 h-3.5" />
+                    </div>
                     <div className="absolute bottom-2.5 left-3 text-white">
                       <span className="text-[9px] font-bold text-[#6B7E74] tracking-wider uppercase block font-sans">
                         {photo.subtitle}
@@ -105,15 +116,16 @@ export default function ContactSection() {
 
             </div>
 
-            {/* Mobile Auto-Scrolling Left Touch Gallery Marquee */}
+            {/* Mobile Auto-Scrolling Left Touch Gallery Marquee (Continuous Auto-Scroll & Click-to-Popup) */}
             <div className="block sm:hidden overflow-hidden rounded-2xl border border-[#E6E0D2] bg-[#F8F6F0] p-2">
               <div className="overflow-x-auto no-scrollbar touch-pan-x">
                 <div className="animate-scroll-left gap-3.5 pr-4">
-                  {/* Render photos twice for infinite auto-scroll illusion */}
-                  {[...officePhotos, ...officePhotos].map((photo, index) => (
+                  {/* Duplicated photos array to enable seamless infinite scroll animation */}
+                  {[...officePhotos, ...officePhotos, ...officePhotos].map((photo, index) => (
                     <div
                       key={index}
-                      className="w-[230px] shrink-0 h-40 rounded-xl overflow-hidden border border-[#E6E0D2] relative shadow-2xs"
+                      onClick={() => setSelectedImage(photo)}
+                      className="w-[230px] shrink-0 h-40 rounded-xl overflow-hidden border border-[#E6E0D2] relative shadow-2xs cursor-pointer"
                     >
                       <img
                         src={photo.src}
@@ -121,6 +133,9 @@ export default function ContactSection() {
                         className="w-full h-full object-cover"
                       />
                       <div className="absolute inset-0 bg-gradient-to-t from-[#0D1110]/80 via-transparent to-transparent" />
+                      <div className="absolute top-2 right-2 bg-[#0D1110]/70 text-[#6B7E74] p-1.5 rounded-full backdrop-blur-xs">
+                        <ZoomIn className="w-3.5 h-3.5" />
+                      </div>
                       <div className="absolute bottom-3 left-3 text-white">
                         <span className="text-[9px] font-bold text-[#6B7E74] tracking-wider uppercase block font-sans">
                           {photo.subtitle}
@@ -134,7 +149,7 @@ export default function ContactSection() {
                 </div>
               </div>
               <p className="text-[10px] text-center text-[#565C58] font-sans pt-2 italic">
-                 Swipe or hold to pause auto-scroll
+                Tap image to view fullscreen · Hold to pause auto-scroll
               </p>
             </div>
 
@@ -325,6 +340,59 @@ export default function ContactSection() {
         </div>
 
       </div>
+
+      {/* FULLSCREEN IMAGE LIGHTBOX POPUP MODAL */}
+      {selectedImage && (
+        <div 
+          onClick={() => setSelectedImage(null)}
+          className="fixed inset-0 z-50 bg-[#0D1110]/90 backdrop-blur-md flex items-center justify-center p-4 sm:p-6 animate-in fade-in duration-200"
+        >
+          <div 
+            onClick={(e) => e.stopPropagation()}
+            className="relative max-w-4xl w-full bg-[#0D1110] border border-[#6B7E74]/50 rounded-2xl overflow-hidden shadow-2xl space-y-4"
+          >
+            {/* Modal Header */}
+            <div className="flex items-center justify-between px-6 py-4 border-b border-[#6B7E74]/30">
+              <div>
+                <span className="text-[10px] font-bold text-[#6B7E74] tracking-widest uppercase block font-sans">
+                  {selectedImage.subtitle}
+                </span>
+                <h3 className="font-serif text-lg font-bold text-white">
+                  {selectedImage.label}
+                </h3>
+              </div>
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="w-9 h-9 rounded-full bg-[#181E1C] border border-[#6B7E74]/40 text-white flex items-center justify-center hover:bg-[#6B7E74] transition-colors"
+                aria-label="Close"
+              >
+                <X className="w-5 h-5" />
+              </button>
+            </div>
+
+            {/* Image Preview */}
+            <div className="max-h-[75vh] flex items-center justify-center p-4">
+              <img
+                src={selectedImage.src}
+                alt={selectedImage.label}
+                className="max-h-[70vh] w-auto max-w-full rounded-xl object-contain shadow-md"
+              />
+            </div>
+
+            {/* Footer info */}
+            <div className="px-6 py-3 border-t border-[#6B7E74]/20 flex items-center justify-between text-xs text-[#6B7E74] font-sans">
+              <span>Adv. P. R. Rathy — Advocate &amp; Notary Office</span>
+              <button
+                onClick={() => setSelectedImage(null)}
+                className="text-xs text-white underline hover:text-[#6B7E74] transition-colors"
+              >
+                Close Preview
+              </button>
+            </div>
+          </div>
+        </div>
+      )}
+
     </section>
   );
 }

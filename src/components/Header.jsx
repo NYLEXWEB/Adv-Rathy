@@ -58,7 +58,7 @@ export default function Header() {
             })}
           </nav>
 
-          {/* Right Header CTA - WhatsApp */}
+          {/* Right Header CTA - WhatsApp (Large Screens Only) */}
           <div className="hidden sm:flex items-center">
             <a
               href={whatsappUrl}
@@ -71,17 +71,8 @@ export default function Header() {
             </a>
           </div>
 
-          {/* Mobile Hamburger Menu Button */}
-          <div className="flex lg:hidden items-center gap-2.5">
-            <a
-              href={whatsappUrl}
-              target="_blank"
-              rel="noopener noreferrer"
-              className="flex sm:hidden items-center justify-center w-8 h-8 rounded-lg bg-[#0D1110] text-[#6B7E74] border border-[#6B7E74]/30"
-              aria-label="WhatsApp"
-            >
-              <MessageSquare className="w-3.5 h-3.5" />
-            </a>
+          {/* Mobile Hamburger Menu Button Only */}
+          <div className="flex lg:hidden items-center">
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
               className="p-1.5 rounded-lg text-[#0D1110] hover:bg-[#F4EFE6] focus:outline-none"
