@@ -43,20 +43,20 @@ export default function PracticeAreas() {
         
         {/* Section Header */}
         <div className="flex flex-col items-center justify-center mb-12 sm:mb-16 text-center">
-          <div className="w-10 h-10 rounded-full border border-[#BE9A5A]/50 bg-[#FAF8F3] flex items-center justify-center mb-3 shadow-2xs">
-            <Scale className="w-5 h-5 text-[#BE9A5A]" strokeWidth={1.5} />
+          <div className="w-10 h-10 rounded-full border border-[#6B7E74]/50 bg-[#FAF8F3] flex items-center justify-center mb-3 shadow-2xs">
+            <Scale className="w-5 h-5 text-[#6B7E74]" strokeWidth={1.5} />
           </div>
 
           <div className="flex items-center gap-4 sm:gap-6 w-full max-w-lg justify-center">
-            <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-[#BE9A5A]/80 to-[#BE9A5A]"></div>
-            <h2 className="font-cinzel text-2xl sm:text-3xl font-bold text-[#14201D] tracking-[0.25em] text-center uppercase">
+            <div className="h-[1px] flex-1 bg-gradient-to-r from-transparent via-[#6B7E74]/80 to-[#6B7E74]"></div>
+            <h2 className="font-cinzel text-2xl sm:text-3xl font-bold text-[#0D1110] tracking-[0.25em] text-center uppercase">
               PRACTICE AREAS
             </h2>
-            <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-[#BE9A5A]/80 to-[#BE9A5A]"></div>
+            <div className="h-[1px] flex-1 bg-gradient-to-l from-transparent via-[#6B7E74]/80 to-[#6B7E74]"></div>
           </div>
         </div>
 
-        {/* 4 Practice Cards (01 Notary Featured -> 02 Family Court -> 03 Criminal -> 04 Civil) */}
+        {/* 4 Practice Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
           {cards.map((card) => {
             const IconComp = card.icon;
@@ -65,14 +65,14 @@ export default function PracticeAreas() {
                 key={card.id}
                 className={`rounded-2xl p-7 flex flex-col justify-between transition-all duration-300 relative ${
                   card.featured
-                    ? 'bg-[#14201D] text-white border-2 border-[#BE9A5A] shadow-md ring-1 ring-[#BE9A5A]/30 lg:-translate-y-2'
-                    : 'bg-[#FAF8F3] text-[#14201D] border border-[#E6E0D2] shadow-2xs hover:border-[#BE9A5A]/60'
+                    ? 'bg-[#0D1110] text-white border-2 border-[#6B7E74] shadow-md ring-1 ring-[#6B7E74]/30 lg:-translate-y-2'
+                    : 'bg-[#FAF8F3] text-[#0D1110] border border-[#E6E0D2] shadow-2xs hover:border-[#6B7E74]/60'
                 }`}
               >
                 {/* Featured Badge for Notary */}
                 {card.featured && (
-                  <div className="absolute -top-3 right-6 bg-[#BE9A5A] text-[#14201D] text-[9px] font-bold tracking-[0.2em] px-3 py-1 rounded-full uppercase flex items-center gap-1 shadow-sm font-sans">
-                    <Star className="w-3 h-3 fill-[#14201D]" />
+                  <div className="absolute -top-3 right-6 bg-[#6B7E74] text-white text-[9px] font-bold tracking-[0.2em] px-3 py-1 rounded-full uppercase flex items-center gap-1 shadow-sm font-sans">
+                    <Star className="w-3 h-3 fill-white text-white" />
                     <span>PRIMARY FOCUS</span>
                   </div>
                 )}
@@ -80,14 +80,14 @@ export default function PracticeAreas() {
                 <div>
                   {/* Top Header */}
                   <div className="flex items-center justify-between mb-6">
-                    <span className={`font-mono text-xs font-bold ${card.featured ? 'text-[#BE9A5A]' : 'text-[#8C733E]'}`}>
+                    <span className={`font-mono text-xs font-bold ${card.featured ? 'text-[#6B7E74]' : 'text-[#4F6157]'}`}>
                       {card.id}
                     </span>
                     <div
                       className={`w-12 h-12 rounded-xl flex items-center justify-center ${
                         card.featured
-                          ? 'bg-[#BE9A5A]/20 text-[#BE9A5A] border border-[#BE9A5A]/40'
-                          : 'bg-[#F4EFE6] text-[#BE9A5A] border border-[#BE9A5A]/30'
+                          ? 'bg-[#6B7E74]/20 text-[#6B7E74] border border-[#6B7E74]/40'
+                          : 'bg-[#F4EFE6] text-[#6B7E74] border border-[#6B7E74]/30'
                       }`}
                     >
                       <IconComp className="w-6 h-6" strokeWidth={1.5} />
@@ -96,10 +96,10 @@ export default function PracticeAreas() {
 
                   {/* Title & Subtitle */}
                   <div className="space-y-1 mb-4">
-                    <h3 className={`font-serif text-xl sm:text-2xl font-bold uppercase ${card.featured ? 'text-white' : 'text-[#14201D]'}`}>
+                    <h3 className={`font-serif text-xl sm:text-2xl font-bold uppercase ${card.featured ? 'text-white' : 'text-[#0D1110]'}`}>
                       {card.title}
                     </h3>
-                    <span className={`text-[10px] font-bold tracking-[0.18em] uppercase block font-sans ${card.featured ? 'text-[#BE9A5A]' : 'text-[#8C733E]'}`}>
+                    <span className={`text-[10px] font-bold tracking-[0.18em] uppercase block font-sans ${card.featured ? 'text-[#6B7E74]' : 'text-[#4F6157]'}`}>
                       {card.subtitle}
                     </span>
                   </div>
@@ -110,11 +110,11 @@ export default function PracticeAreas() {
                   </p>
                 </div>
 
-                {/* Bottom Gold Line Ornament */}
+                {/* Bottom Line Ornament */}
                 <div className="pt-6 mt-6 border-t border-current/10 flex items-center gap-2">
-                  <div className={`w-6 h-[1px] ${card.featured ? 'bg-[#BE9A5A]' : 'bg-[#BE9A5A]/60'}`}></div>
-                  <span className={`text-[9px] ${card.featured ? 'text-[#BE9A5A]' : 'text-[#8C733E]'}`}>❖</span>
-                  <div className={`w-full h-[1px] ${card.featured ? 'bg-[#BE9A5A]/40' : 'bg-[#BE9A5A]/30'}`}></div>
+                  <div className={`w-6 h-[1px] ${card.featured ? 'bg-[#6B7E74]' : 'bg-[#6B7E74]/60'}`}></div>
+                  <span className={`text-[9px] ${card.featured ? 'text-[#6B7E74]' : 'text-[#4F6157]'}`}>❖</span>
+                  <div className={`w-full h-[1px] ${card.featured ? 'bg-[#6B7E74]/40' : 'bg-[#6B7E74]/30'}`}></div>
                 </div>
 
               </div>

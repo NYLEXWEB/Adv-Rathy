@@ -23,15 +23,15 @@ export default function Header() {
           
           {/* Brand / Official Advocate Logo Emblem */}
           <a href="#home" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-[#14201D] border border-[#BE9A5A]/50 flex items-center justify-center relative shadow-sm group-hover:border-[#BE9A5A] transition-colors">
-              <Scale className="w-5 h-5 sm:w-6 sm:h-6 text-[#BE9A5A]" strokeWidth={1.6} />
+            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-[#0D1110] border border-[#6B7E74]/50 flex items-center justify-center relative shadow-sm group-hover:border-[#6B7E74] transition-colors">
+              <Scale className="w-5 h-5 sm:w-6 sm:h-6 text-[#6B7E74]" strokeWidth={1.6} />
             </div>
 
             <div className="flex flex-col">
-              <span className="font-cinzel text-base sm:text-lg font-bold text-[#14201D] tracking-wider leading-tight">
+              <span className="font-cinzel text-base sm:text-lg font-bold text-[#0D1110] tracking-wider leading-tight">
                 ADV. P. R. RATHY
               </span>
-              <span className="text-[9px] sm:text-[10px] font-semibold text-[#BE9A5A] tracking-[0.2em] font-sans uppercase">
+              <span className="text-[9px] sm:text-[10px] font-semibold text-[#6B7E74] tracking-[0.2em] font-sans uppercase">
                 ADVOCATE &amp; NOTARY
               </span>
             </div>
@@ -48,8 +48,8 @@ export default function Header() {
                   onClick={() => setActiveNav(item.name)}
                   className={`text-[12px] xl:text-[13px] font-semibold tracking-[0.12em] transition-colors py-1 ${
                     isActive
-                      ? 'text-[#14201D] nav-link-active font-bold'
-                      : 'text-[#565C58] hover:text-[#14201D]'
+                      ? 'text-[#0D1110] nav-link-active font-bold'
+                      : 'text-[#565C58] hover:text-[#0D1110]'
                   }`}
                 >
                   {item.name}
@@ -64,9 +64,9 @@ export default function Header() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex items-center gap-2 bg-[#14201D] hover:bg-[#1C2D29] text-white px-4 py-2 sm:py-2.5 rounded-lg text-xs font-medium tracking-wider transition-all duration-200 border border-[#BE9A5A]/40 shadow-2xs hover:border-[#BE9A5A] group"
+              className="flex items-center gap-2 bg-[#0D1110] hover:bg-[#181E1C] text-white px-4 py-2 sm:py-2.5 rounded-lg text-xs font-medium tracking-wider transition-all duration-200 border border-[#6B7E74]/40 shadow-2xs hover:border-[#6B7E74] group"
             >
-              <MessageSquare className="w-3.5 h-3.5 text-[#BE9A5A] group-hover:scale-110 transition-transform" />
+              <MessageSquare className="w-3.5 h-3.5 text-[#6B7E74] group-hover:scale-110 transition-transform" />
               <span className="font-sans font-bold tracking-wider text-xs uppercase text-white">WHATSAPP</span>
             </a>
           </div>
@@ -77,14 +77,14 @@ export default function Header() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="flex sm:hidden items-center justify-center w-8 h-8 rounded-lg bg-[#14201D] text-[#BE9A5A] border border-[#BE9A5A]/30"
+              className="flex sm:hidden items-center justify-center w-8 h-8 rounded-lg bg-[#0D1110] text-[#6B7E74] border border-[#6B7E74]/30"
               aria-label="WhatsApp"
             >
               <MessageSquare className="w-3.5 h-3.5" />
             </a>
             <button
               onClick={() => setMobileMenuOpen(!mobileMenuOpen)}
-              className="p-1.5 rounded-lg text-[#14201D] hover:bg-[#F4EFE6] focus:outline-none"
+              className="p-1.5 rounded-lg text-[#0D1110] hover:bg-[#F4EFE6] focus:outline-none"
               aria-label="Toggle menu"
             >
               {mobileMenuOpen ? <X className="w-5 h-5" /> : <Menu className="w-5 h-5" />}
@@ -105,7 +105,7 @@ export default function Header() {
                     setMobileMenuOpen(false);
                   }}
                   className={`text-xs font-semibold tracking-wider py-2 border-b border-[#E6E0D2]/40 transition-colors ${
-                    activeNav === item.name ? 'text-[#BE9A5A] pl-2 border-l-2 border-l-[#BE9A5A]' : 'text-[#565C58]'
+                    activeNav === item.name ? 'text-[#6B7E74] pl-2 border-l-2 border-l-[#6B7E74]' : 'text-[#565C58]'
                   }`}
                 >
                   {item.name}
@@ -117,16 +117,16 @@ export default function Header() {
                 href={whatsappUrl}
                 target="_blank"
                 rel="noopener noreferrer"
-                className="flex items-center justify-center gap-2 bg-[#14201D] text-white py-2.5 rounded-lg text-xs font-bold tracking-wider w-full border border-[#BE9A5A]/30 uppercase"
+                className="flex items-center justify-center gap-2 bg-[#0D1110] text-white py-2.5 rounded-lg text-xs font-bold tracking-wider w-full border border-[#6B7E74]/30 uppercase"
               >
-                <MessageSquare className="w-3.5 h-3.5 text-[#BE9A5A]" />
+                <MessageSquare className="w-3.5 h-3.5 text-[#6B7E74]" />
                 <span>WhatsApp: 97455 69225</span>
               </a>
               <a
                 href="tel:+919745569225"
-                className="flex items-center justify-center gap-2 bg-[#FAF8F3] text-[#14201D] py-2.5 rounded-lg text-xs font-bold tracking-wider w-full border border-[#E6E0D2] uppercase"
+                className="flex items-center justify-center gap-2 bg-[#FAF8F3] text-[#0D1110] py-2.5 rounded-lg text-xs font-bold tracking-wider w-full border border-[#E6E0D2] uppercase"
               >
-                <Phone className="w-3.5 h-3.5 text-[#BE9A5A]" />
+                <Phone className="w-3.5 h-3.5 text-[#6B7E74]" />
                 <span>Call: 97455 69225</span>
               </a>
             </div>

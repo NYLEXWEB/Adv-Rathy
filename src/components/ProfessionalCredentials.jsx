@@ -12,52 +12,52 @@ export default function ProfessionalCredentials() {
             
             {/* 1. ENROLLMENT NO. */}
             <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-1.5">
-              <div className="flex items-center gap-2 text-[#BE9A5A]">
-                <Award className="w-4 h-4 text-[#BE9A5A]" />
-                <span className="text-[10px] font-bold tracking-[0.2em] uppercase font-sans text-[#8C733E]">
+              <div className="flex items-center gap-2 text-[#6B7E74]">
+                <Award className="w-4 h-4 text-[#6B7E74]" />
+                <span className="text-[10px] font-bold tracking-[0.2em] uppercase font-sans text-[#4F6157]">
                   ENROLLMENT NO.
                 </span>
               </div>
-              <span className="font-cinzel text-xl sm:text-2xl font-bold text-[#14201D] tracking-wider pt-0.5">
+              <span className="font-cinzel text-xl sm:text-2xl font-bold text-[#0D1110] tracking-wider pt-0.5">
                 K/000931/2004
               </span>
             </div>
 
             {/* 2. ENROLLMENT DATE */}
             <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-1.5 pt-4 sm:pt-0 sm:pl-6 lg:pl-8">
-              <div className="flex items-center gap-2 text-[#BE9A5A]">
-                <Calendar className="w-4 h-4 text-[#BE9A5A]" />
-                <span className="text-[10px] font-bold tracking-[0.2em] uppercase font-sans text-[#8C733E]">
+              <div className="flex items-center gap-2 text-[#6B7E74]">
+                <Calendar className="w-4 h-4 text-[#6B7E74]" />
+                <span className="text-[10px] font-bold tracking-[0.2em] uppercase font-sans text-[#4F6157]">
                   ENROLLMENT DATE
                 </span>
               </div>
-              <span className="font-cinzel text-xl sm:text-2xl font-bold text-[#14201D] tracking-wider pt-0.5">
+              <span className="font-cinzel text-xl sm:text-2xl font-bold text-[#0D1110] tracking-wider pt-0.5">
                 21.11.2004
               </span>
             </div>
 
             {/* 3. QUALIFICATION */}
             <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-2 pt-4 sm:pt-0 sm:pl-6 lg:pl-8">
-              <div className="flex items-center gap-2 text-[#BE9A5A]">
-                <GraduationCap className="w-4 h-4 text-[#BE9A5A]" />
-                <span className="text-[10px] font-bold tracking-[0.2em] uppercase font-sans text-[#8C733E]">
+              <div className="flex items-center gap-2 text-[#6B7E74]">
+                <GraduationCap className="w-4 h-4 text-[#6B7E74]" />
+                <span className="text-[10px] font-bold tracking-[0.2em] uppercase font-sans text-[#4F6157]">
                   QUALIFICATION
                 </span>
               </div>
-              <span className="font-serif text-xl sm:text-2xl font-bold text-[#14201D] tracking-wide pt-1">
+              <span className="font-serif text-xl sm:text-2xl font-bold text-[#0D1110] tracking-wide pt-1">
                 B.A., LL.B.
               </span>
             </div>
 
             {/* 4. PRACTICE EXPERIENCE */}
             <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-2 pt-4 sm:pt-0 sm:pl-6 lg:pl-8">
-              <div className="flex items-center gap-2 text-[#BE9A5A]">
-                <Briefcase className="w-4 h-4 text-[#BE9A5A]" />
-                <span className="text-[10px] font-bold tracking-[0.2em] uppercase font-sans text-[#8C733E]">
+              <div className="flex items-center gap-2 text-[#6B7E74]">
+                <Briefcase className="w-4 h-4 text-[#6B7E74]" />
+                <span className="text-[10px] font-bold tracking-[0.2em] uppercase font-sans text-[#4F6157]">
                   PRACTICE EXPERIENCE
                 </span>
               </div>
-              <span className="font-serif text-xl sm:text-2xl font-bold text-[#14201D] tracking-wide pt-1">
+              <span className="font-serif text-xl sm:text-2xl font-bold text-[#0D1110] tracking-wide pt-1">
                 22 Years
               </span>
             </div>

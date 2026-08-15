@@ -11,7 +11,7 @@ import Footer from './components/Footer';
 
 export default function App() {
   return (
-    <div className="min-h-screen bg-[#F8F6F0] text-[#1F2421] selection:bg-[#BE9A5A] selection:text-white font-sans">
+    <div className="min-h-screen bg-[#F8F6F0] text-[#111615] selection:bg-[#6B7E74] selection:text-white font-sans">
       <Header />
       <main>
         <Hero />

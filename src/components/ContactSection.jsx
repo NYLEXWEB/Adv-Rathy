@@ -30,25 +30,25 @@ export default function ContactSection() {
           
           {/* Header */}
           <div className="text-center space-y-3">
-            <span className="text-xs font-semibold text-[#BE9A5A] tracking-[0.2em] uppercase font-sans">
+            <span className="text-xs font-semibold text-[#6B7E74] tracking-[0.2em] uppercase font-sans">
               ⟡ DIRECT LEGAL INQUIRY ⟡
             </span>
-            <h2 className="font-cinzel text-3xl sm:text-4xl font-bold text-[#14201D] tracking-wider uppercase">
+            <h2 className="font-cinzel text-3xl sm:text-4xl font-bold text-[#0D1110] tracking-wider uppercase">
               OFFICE &amp; CONTACT
             </h2>
-            <p className="font-serif text-base sm:text-lg text-[#BE9A5A] italic">
+            <p className="font-serif text-base sm:text-lg text-[#6B7E74] italic">
               Send a direct legal inquiry to Adv. P. R. Rathy
             </p>
-            <div className="w-16 h-[2px] bg-[#BE9A5A] mx-auto"></div>
+            <div className="w-16 h-[2px] bg-[#6B7E74] mx-auto"></div>
           </div>
 
           {/* Contact Form */}
           {submitted ? (
-            <div className="bg-[#FAF8F3] border border-[#BE9A5A]/50 rounded-xl p-8 text-center space-y-4 my-6">
-              <div className="w-14 h-14 rounded-full bg-[#14201D] text-[#BE9A5A] flex items-center justify-center mx-auto border border-[#BE9A5A]/40">
+            <div className="bg-[#FAF8F3] border border-[#6B7E74]/50 rounded-xl p-8 text-center space-y-4 my-6">
+              <div className="w-14 h-14 rounded-full bg-[#0D1110] text-[#6B7E74] flex items-center justify-center mx-auto border border-[#6B7E74]/40">
                 <CheckCircle2 className="w-8 h-8" />
               </div>
-              <h3 className="font-serif text-2xl font-bold text-[#14201D]">
+              <h3 className="font-serif text-2xl font-bold text-[#0D1110]">
                 Inquiry Submitted Successfully
               </h3>
               <p className="text-sm text-[#565C58] max-w-md mx-auto leading-relaxed font-sans">
@@ -56,7 +56,7 @@ export default function ContactSection() {
               </p>
               <button
                 onClick={() => setSubmitted(false)}
-                className="mt-2 text-xs font-semibold text-[#BE9A5A] underline hover:text-[#14201D] transition-colors"
+                className="mt-2 text-xs font-semibold text-[#6B7E74] underline hover:text-[#0D1110] transition-colors"
               >
                 Send another message
               </button>
@@ -67,7 +67,7 @@ export default function ContactSection() {
                 
                 {/* Full Name */}
                 <div className="space-y-2">
-                  <label className="block text-xs font-bold text-[#14201D] uppercase tracking-wider font-sans">
+                  <label className="block text-xs font-bold text-[#0D1110] uppercase tracking-wider font-sans">
                     Full Name *
                   </label>
                   <input
@@ -76,13 +76,13 @@ export default function ContactSection() {
                     placeholder="Enter your full name"
                     value={formData.name}
                     onChange={(e) => setFormData({ ...formData, name: e.target.value })}
-                    className="w-full bg-[#FAF8F3] border border-[#E6E0D2] focus:border-[#BE9A5A] rounded-lg px-4 py-3 text-sm text-[#14201D] focus:outline-none transition-colors"
+                    className="w-full bg-[#FAF8F3] border border-[#E6E0D2] focus:border-[#6B7E74] rounded-lg px-4 py-3 text-sm text-[#0D1110] focus:outline-none transition-colors"
                   />
                 </div>
 
                 {/* Phone Number */}
                 <div className="space-y-2">
-                  <label className="block text-xs font-bold text-[#14201D] uppercase tracking-wider font-sans">
+                  <label className="block text-xs font-bold text-[#0D1110] uppercase tracking-wider font-sans">
                     Phone Number *
                   </label>
                   <input
@@ -91,13 +91,13 @@ export default function ContactSection() {
                     placeholder="Enter your phone number"
                     value={formData.phone}
                     onChange={(e) => setFormData({ ...formData, phone: e.target.value })}
-                    className="w-full bg-[#FAF8F3] border border-[#E6E0D2] focus:border-[#BE9A5A] rounded-lg px-4 py-3 text-sm text-[#14201D] focus:outline-none transition-colors"
+                    className="w-full bg-[#FAF8F3] border border-[#E6E0D2] focus:border-[#6B7E74] rounded-lg px-4 py-3 text-sm text-[#0D1110] focus:outline-none transition-colors"
                   />
                 </div>
 
                 {/* Email Address */}
                 <div className="space-y-2">
-                  <label className="block text-xs font-bold text-[#14201D] uppercase tracking-wider font-sans">
+                  <label className="block text-xs font-bold text-[#0D1110] uppercase tracking-wider font-sans">
                     Email Address *
                   </label>
                   <input
@@ -106,19 +106,19 @@ export default function ContactSection() {
                     placeholder="Enter your email address"
                     value={formData.email}
                     onChange={(e) => setFormData({ ...formData, email: e.target.value })}
-                    className="w-full bg-[#FAF8F3] border border-[#E6E0D2] focus:border-[#BE9A5A] rounded-lg px-4 py-3 text-sm text-[#14201D] focus:outline-none transition-colors"
+                    className="w-full bg-[#FAF8F3] border border-[#E6E0D2] focus:border-[#6B7E74] rounded-lg px-4 py-3 text-sm text-[#0D1110] focus:outline-none transition-colors"
                   />
                 </div>
 
                 {/* Practice Area Selection */}
                 <div className="space-y-2">
-                  <label className="block text-xs font-bold text-[#14201D] uppercase tracking-wider font-sans">
+                  <label className="block text-xs font-bold text-[#0D1110] uppercase tracking-wider font-sans">
                     Practice Area Inquiry *
                   </label>
                   <select
                     value={formData.matterType}
                     onChange={(e) => setFormData({ ...formData, matterType: e.target.value })}
-                    className="w-full bg-[#FAF8F3] border border-[#E6E0D2] focus:border-[#BE9A5A] rounded-lg px-4 py-3 text-sm text-[#14201D] focus:outline-none transition-colors"
+                    className="w-full bg-[#FAF8F3] border border-[#E6E0D2] focus:border-[#6B7E74] rounded-lg px-4 py-3 text-sm text-[#0D1110] focus:outline-none transition-colors"
                   >
                     <option value="Notary Service">Notary Public Service</option>
                     <option value="Family Court">Family Court Practice</option>
@@ -131,7 +131,7 @@ export default function ContactSection() {
 
               {/* Message Details */}
               <div className="space-y-2">
-                <label className="block text-xs font-bold text-[#14201D] uppercase tracking-wider font-sans">
+                <label className="block text-xs font-bold text-[#0D1110] uppercase tracking-wider font-sans">
                   Brief Description of Legal Inquiry *
                 </label>
                 <textarea
@@ -140,7 +140,7 @@ export default function ContactSection() {
                   placeholder="Describe your legal matter or notary inquiry details..."
                   value={formData.message}
                   onChange={(e) => setFormData({ ...formData, message: e.target.value })}
-                  className="w-full bg-[#FAF8F3] border border-[#E6E0D2] focus:border-[#BE9A5A] rounded-lg px-4 py-3 text-sm text-[#14201D] focus:outline-none transition-colors resize-y"
+                  className="w-full bg-[#FAF8F3] border border-[#E6E0D2] focus:border-[#6B7E74] rounded-lg px-4 py-3 text-sm text-[#0D1110] focus:outline-none transition-colors resize-y"
                 />
               </div>
 
@@ -148,9 +148,9 @@ export default function ContactSection() {
               <div className="text-center pt-2">
                 <button
                   type="submit"
-                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#14201D] hover:bg-[#1C2D29] text-white px-10 py-3.5 rounded-md text-xs font-semibold tracking-wider uppercase transition-all shadow-sm border border-[#BE9A5A]/40 group"
+                  className="w-full sm:w-auto inline-flex items-center justify-center gap-2.5 bg-[#0D1110] hover:bg-[#181E1C] text-white px-10 py-3.5 rounded-md text-xs font-semibold tracking-wider uppercase transition-all shadow-sm border border-[#6B7E74]/40 group"
                 >
-                  <Send className="w-4 h-4 text-[#BE9A5A] group-hover:translate-x-1 transition-transform" />
+                  <Send className="w-4 h-4 text-[#6B7E74] group-hover:translate-x-1 transition-transform" />
                   <span>SUBMIT LEGAL INQUIRY</span>
                 </button>
               </div>
@@ -162,9 +162,9 @@ export default function ContactSection() {
             {/* CALL NOW */}
             <a
               href="tel:+919745569225"
-              className="inline-flex items-center justify-center gap-2 bg-[#14201D] hover:bg-[#1C2D29] text-white py-3 rounded-lg text-xs font-semibold tracking-wider uppercase transition-all border border-[#BE9A5A]/30 shadow-2xs font-sans"
+              className="inline-flex items-center justify-center gap-2 bg-[#0D1110] hover:bg-[#181E1C] text-white py-3 rounded-lg text-xs font-semibold tracking-wider uppercase transition-all border border-[#6B7E74]/30 shadow-2xs font-sans"
             >
-              <Phone className="w-3.5 h-3.5 text-[#BE9A5A]" />
+              <Phone className="w-3.5 h-3.5 text-[#6B7E74]" />
               <span>CALL NOW</span>
             </a>
 
@@ -173,18 +173,18 @@ export default function ContactSection() {
               href={whatsappUrl}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-[#FAF8F3] hover:bg-[#F2EBDC] text-[#14201D] py-3 rounded-lg text-xs font-bold tracking-wider uppercase transition-all border border-[#BE9A5A]/60 shadow-2xs font-sans"
+              className="inline-flex items-center justify-center gap-2 bg-[#FAF8F3] hover:bg-[#F2EBDC] text-[#0D1110] py-3 rounded-lg text-xs font-bold tracking-wider uppercase transition-all border border-[#6B7E74]/60 shadow-2xs font-sans"
             >
-              <MessageSquare className="w-3.5 h-3.5 text-[#BE9A5A]" />
+              <MessageSquare className="w-3.5 h-3.5 text-[#6B7E74]" />
               <span>WHATSAPP</span>
             </a>
 
             {/* EMAIL */}
             <a
               href="mailto:advpraarathy123@gmail.com"
-              className="inline-flex items-center justify-center gap-2 bg-[#FAF8F3] hover:bg-[#F2EBDC] text-[#14201D] py-3 rounded-lg text-xs font-semibold tracking-wider uppercase transition-all border border-[#BE9A5A]/60 shadow-2xs font-sans"
+              className="inline-flex items-center justify-center gap-2 bg-[#FAF8F3] hover:bg-[#F2EBDC] text-[#0D1110] py-3 rounded-lg text-xs font-semibold tracking-wider uppercase transition-all border border-[#6B7E74]/60 shadow-2xs font-sans"
             >
-              <Mail className="w-3.5 h-3.5 text-[#14201D]" />
+              <Mail className="w-3.5 h-3.5 text-[#0D1110]" />
               <span>EMAIL</span>
             </a>
 
@@ -193,9 +193,9 @@ export default function ContactSection() {
               href={`https://www.google.com/maps/search/?api=1&query=${mapAddressQuery}`}
               target="_blank"
               rel="noopener noreferrer"
-              className="inline-flex items-center justify-center gap-2 bg-[#FAF8F3] hover:bg-[#F2EBDC] text-[#14201D] py-3 rounded-lg text-xs font-semibold tracking-wider uppercase transition-all border border-[#BE9A5A]/60 shadow-2xs font-sans"
+              className="inline-flex items-center justify-center gap-2 bg-[#FAF8F3] hover:bg-[#F2EBDC] text-[#0D1110] py-3 rounded-lg text-xs font-semibold tracking-wider uppercase transition-all border border-[#6B7E74]/60 shadow-2xs font-sans"
             >
-              <Navigation className="w-3.5 h-3.5 text-[#BE9A5A]" />
+              <Navigation className="w-3.5 h-3.5 text-[#6B7E74]" />
               <span>DIRECTIONS</span>
             </a>
           </div>

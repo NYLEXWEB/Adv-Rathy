@@ -41,24 +41,24 @@ export default function QuickInfoStrip() {
                 key={index}
                 className={`p-6 rounded-xl border flex flex-col items-center text-center transition-all ${
                   item.featured
-                    ? 'bg-[#14201D] text-white border-[#BE9A5A]/50 shadow-sm'
-                    : 'bg-[#FAF8F3] text-[#14201D] border-[#E6E0D2]'
+                    ? 'bg-[#0D1110] text-white border-[#6B7E74]/50 shadow-sm'
+                    : 'bg-[#FAF8F3] text-[#0D1110] border-[#E6E0D2]'
                 }`}
               >
                 <div
                   className={`w-12 h-12 rounded-full flex items-center justify-center mb-4 ${
                     item.featured
-                      ? 'bg-[#BE9A5A]/20 text-[#BE9A5A] border border-[#BE9A5A]/40'
-                      : 'bg-[#F4EFE6] text-[#BE9A5A] border border-[#BE9A5A]/30'
+                      ? 'bg-[#6B7E74]/20 text-[#6B7E74] border border-[#6B7E74]/40'
+                      : 'bg-[#F4EFE6] text-[#6B7E74] border border-[#6B7E74]/30'
                   }`}
                 >
                   <IconComp className="w-6 h-6" strokeWidth={1.5} />
                 </div>
 
-                <h3 className={`font-serif text-lg font-bold uppercase tracking-wider ${item.featured ? 'text-white' : 'text-[#14201D]'}`}>
+                <h3 className={`font-serif text-lg font-bold uppercase tracking-wider ${item.featured ? 'text-white' : 'text-[#0D1110]'}`}>
                   {item.number}
                 </h3>
-                <span className={`text-[10px] font-bold tracking-[0.2em] uppercase font-sans mb-2 ${item.featured ? 'text-[#BE9A5A]' : 'text-[#8C733E]'}`}>
+                <span className={`text-[10px] font-bold tracking-[0.2em] uppercase font-sans mb-2 ${item.featured ? 'text-[#6B7E74]' : 'text-[#4F6157]'}`}>
                   {item.label}
                 </span>
 

@@ -5,17 +5,17 @@
     --bg-ivory: #F8F6F0;
     --bg-card: #FAF8F3;
     --bg-card-alt: #F4EFE6;
-    --dark-green: #14201D;
-    --dark-green-hover: #1C2D29;
-    --gold: #BE9A5A;
-    --gold-light: #CBAA6A;
-    --gold-muted: #D8BD83;
-    --gold-dark: #A07F43;
-    --text-primary: #1F2421;
+    --dark-black: #0D1110;
+    --dark-black-hover: #181E1C;
+    --accent: #6B7E74;
+    --accent-light: #889A90;
+    --accent-muted: #A3B2AA;
+    --accent-dark: #4F6157;
+    --text-primary: #111615;
     --text-secondary: #565C58;
-    --text-gold: #BE9A5A;
+    --text-accent: #6B7E74;
     --border-light: #E6E0D2;
-    --border-gold: rgba(190, 154, 90, 0.35);
+    --border-accent: rgba(107, 126, 116, 0.35);
   }
 
   body {
@@ -25,7 +25,11 @@
     overflow-x: hidden;
   }
 
-  h1, h2, h3, h4, .font-serif {
+  h1,
+  h2,
+  h3,
+  h4,
+  .font-serif {
     font-family: 'Cormorant Garamond', Georgia, serif;
   }
 
@@ -37,21 +41,22 @@
 /* Custom background paper texture effect */
 .bg-paper-texture {
   background-color: #F8F6F0;
-  background-image: 
+  background-image:
     radial-gradient(at 10% 10%, rgba(240, 235, 222, 0.5) 0px, transparent 50%),
     radial-gradient(at 90% 90%, rgba(235, 228, 212, 0.4) 0px, transparent 50%),
     radial-gradient(at 50% 50%, rgba(255, 255, 255, 0.6) 0px, transparent 80%);
 }
 
 .bg-dark-panel {
-  background-color: #14201D;
-  background-image: radial-gradient(circle at top right, rgba(30, 48, 43, 0.5), transparent 70%);
+  background-color: #0D1110;
+  background-image: radial-gradient(circle at top right, rgba(24, 30, 28, 0.5), transparent 70%);
 }
 
 /* Gold Underline Pill effect */
 .nav-link-active {
   position: relative;
 }
+
 .nav-link-active::after {
   content: '';
   position: absolute;
@@ -59,7 +64,7 @@
   left: 0;
   width: 100%;
   height: 2.5px;
-  background-color: #BE9A5A;
+  background-color: #6B7E74;
   border-radius: 2px;
 }
 
@@ -70,12 +75,13 @@
   justify-content: center;
   gap: 12px;
 }
+
 .gold-divider::before,
 .gold-divider::after {
   content: '';
   height: 1px;
   width: 60px;
-  background: linear-gradient(90deg, transparent, #BE9A5A, transparent);
+  background: linear-gradient(90deg, transparent, #6B7E74, transparent);
 }
 
 /* Image blend overlay */
@@ -88,13 +94,16 @@
 ::-webkit-scrollbar {
   width: 8px;
 }
+
 ::-webkit-scrollbar-track {
   background: #F8F6F0;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: #CBAA6A;
+  background: #889A90;
   border-radius: 4px;
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: #BE9A5A;
+  background: #6B7E74;
 }
