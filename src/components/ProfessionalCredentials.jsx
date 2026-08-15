@@ -36,11 +36,11 @@ export default function ProfessionalCredentials() {
   ];
 
   return (
-    <section className="bg-[#FAF8F3] border-b border-[#E6E0D2] py-10 relative overflow-hidden">
+    <section className="bg-[#FAF8F3] border-b border-[#E6E0D2] py-8 sm:py-10 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Credentials Grid */}
-        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+        {/* Credentials Grid: 1 column on mobile screens (one by one), 2 on sm, 3 on md, 5 on lg */}
+        <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
           {credentials.map((item, index) => {
             const Icon = item.icon;
             return (
