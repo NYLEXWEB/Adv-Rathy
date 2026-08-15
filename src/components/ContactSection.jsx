@@ -194,7 +194,16 @@ export default function ContactSection() {
 
                 <div className="flex items-center gap-3">
                   <Phone className="w-4 h-4 text-[#6B7E74] shrink-0" />
+                  <span className="text-[#6B7E74] font-bold text-[10px] font-sans uppercase">PHONE:</span>
                   <a href="tel:+919745569225" className="font-mono font-bold text-white hover:text-[#6B7E74] transition-colors">
+                    97455 69225
+                  </a>
+                </div>
+
+                <div className="flex items-center gap-3">
+                  <MessageSquare className="w-4 h-4 text-[#6B7E74] shrink-0" />
+                  <span className="text-[#6B7E74] font-bold text-[10px] font-sans uppercase">WHATSAPP:</span>
+                  <a href={whatsappUrl} target="_blank" rel="noopener noreferrer" className="font-mono font-bold text-white hover:text-[#6B7E74] transition-colors">
                     97455 69225
                   </a>
                 </div>
