@@ -1,5 +1,5 @@
 import React, { useState } from 'react';
-import { Phone, Menu, X, Scale, MessageSquare } from 'lucide-react';
+import { Phone, Menu, X, MessageSquare } from 'lucide-react';
 
 export default function Header() {
   const [mobileMenuOpen, setMobileMenuOpen] = useState(false);
@@ -21,10 +21,10 @@ export default function Header() {
       <header className="bg-[#FAF8F3]/95 backdrop-blur-md border border-[#E6E0D2] rounded-xl sm:rounded-2xl shadow-md transition-all">
         <div className="px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
           
-          {/* Brand / Official Advocate Logo Emblem */}
+          {/* Brand / Official Advocate Logo Image */}
           <a href="#home" className="flex items-center gap-3 group">
-            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-[#0D1110] border border-[#6B7E74]/50 flex items-center justify-center relative shadow-sm group-hover:border-[#6B7E74] transition-colors">
-              <Scale className="w-5 h-5 sm:w-6 sm:h-6 text-[#6B7E74]" strokeWidth={1.6} />
+            <div className="w-10 h-10 sm:w-11 sm:h-11 rounded-lg bg-[#0D1110] border border-[#6B7E74]/50 flex items-center justify-center relative shadow-sm group-hover:border-[#6B7E74] transition-colors p-1">
+              <img src="/logo.png" alt="Adv. P. R. Rathy Logo" className="w-full h-full object-contain" />
             </div>
 
             <div className="flex flex-col">

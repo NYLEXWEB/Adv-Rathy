@@ -16,6 +16,12 @@ export default function ContactSection() {
     'O.K. Khalid Building, Near Court Complex, Sultan Bathery, Wayanad District, Kerala 673592'
   );
 
+  const officePhotos = [
+    { src: '/image1.jpg', label: 'Office Exterior' },
+    { src: '/imaage2.jpg', label: 'Consultation Area' },
+    { src: '/img3.jpg', label: 'Advocate Office' },
+  ];
+
   const handleSubmit = (e) => {
     e.preventDefault();
     setSubmitted(true);
@@ -23,7 +29,7 @@ export default function ContactSection() {
 
   return (
     <section id="contact" className="py-16 sm:py-24 bg-[#FAF8F3] border-t border-[#E6E0D2] relative">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 space-y-12">
         
         {/* Contact Container Card */}
         <div className="max-w-4xl mx-auto bg-[#F8F6F0] border border-[#E6E0D2] rounded-2xl p-8 sm:p-12 lg:p-14 shadow-xs space-y-8 relative overflow-hidden">
@@ -40,6 +46,28 @@ export default function ContactSection() {
               Send a direct legal inquiry to Adv. P. R. Rathy
             </p>
             <div className="w-16 h-[2px] bg-[#6B7E74] mx-auto"></div>
+          </div>
+
+          {/* Modern Office Gallery Carousel (Touch-scrollable on mobile) */}
+          <div className="space-y-2 pt-2">
+            <div className="flex sm:grid sm:grid-cols-3 gap-3.5 overflow-x-auto no-scrollbar snap-x snap-mandatory pb-2 sm:pb-0">
+              {officePhotos.map((photo, index) => (
+                <div
+                  key={index}
+                  className="snap-center shrink-0 w-[220px] sm:w-auto h-36 sm:h-44 rounded-xl overflow-hidden border border-[#E6E0D2] relative group shadow-2xs"
+                >
+                  <img
+                    src={photo.src}
+                    alt={photo.label}
+                    className="w-full h-full object-cover group-hover:scale-105 transition-transform duration-300"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-[#0D1110]/70 via-transparent to-transparent" />
+                  <span className="absolute bottom-2.5 left-3 text-[11px] font-semibold text-white font-sans tracking-wide">
+                    {photo.label}
+                  </span>
+                </div>
+              ))}
+            </div>
           </div>
 
           {/* Contact Form */}

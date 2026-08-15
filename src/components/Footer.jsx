@@ -1,5 +1,5 @@
 import React from 'react';
-import { Scale, Phone, Mail, MapPin, MessageSquare } from 'lucide-react';
+import { Phone, Mail, MapPin, MessageSquare } from 'lucide-react';
 
 export default function Footer() {
   const whatsappUrl = "https://wa.me/919745569225?text=Hello%20Adv.%20P.%20R.%20Rathy%2C%20I%20would%20like%20to%20make%20a%20legal%20enquiry.";
@@ -14,8 +14,8 @@ export default function Footer() {
           {/* Brand Column */}
           <div className="md:col-span-5 space-y-4">
             <a href="#home" className="flex items-center gap-3">
-              <div className="w-10 h-10 rounded-lg bg-[#6B7E74]/20 border border-[#6B7E74]/50 flex items-center justify-center">
-                <Scale className="w-5 h-5 text-[#6B7E74]" strokeWidth={1.6} />
+              <div className="w-10 h-10 rounded-lg bg-[#6B7E74]/20 border border-[#6B7E74]/50 flex items-center justify-center p-1">
+                <img src="/logo.png" alt="Adv. P. R. Rathy Logo" className="w-full h-full object-contain" />
               </div>
               <div className="flex flex-col">
                 <span className="font-cinzel text-lg font-bold text-white tracking-wider leading-tight">

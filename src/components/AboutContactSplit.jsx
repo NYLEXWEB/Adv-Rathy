@@ -11,19 +11,38 @@ export default function AboutContactSplit() {
         {/* Split Grid */}
         <div className="grid grid-cols-1 lg:grid-cols-12 gap-8 lg:gap-12 items-stretch">
           
-          {/* Left Column: About Bio (Ivory Panel) */}
+          {/* Left Column: About Bio (Ivory Panel with Circle Profile Picture) */}
           <div className="lg:col-span-7 bg-[#F8F6F0] border border-[#E6E0D2] rounded-2xl p-8 sm:p-10 lg:p-12 flex flex-col justify-between space-y-8 shadow-2xs">
             <div className="space-y-6">
               
-              {/* Tagline & Header */}
-              <div className="space-y-2">
-                <span className="text-xs font-semibold text-[#6B7E74] tracking-[0.2em] uppercase font-sans">
-                  PROFESSIONAL PROFILE
-                </span>
-                <h2 className="font-cinzel text-3xl sm:text-4xl font-bold text-[#0D1110] tracking-wider uppercase">
-                  ABOUT ADV. P. R. RATHY
-                </h2>
-                <div className="w-16 h-[2px] bg-[#6B7E74] mt-2"></div>
+              {/* Header with Circle Profile Image */}
+              <div className="flex flex-col sm:flex-row items-center sm:items-start gap-6">
+                
+                {/* Circle Profile Image */}
+                <div className="relative shrink-0">
+                  <div className="w-28 h-28 sm:w-32 sm:h-32 rounded-full border-2 border-[#6B7E74] p-1 bg-[#FAF8F3] shadow-md">
+                    <img
+                      src="/profile.jpg"
+                      alt="Adv. P. R. Rathy Profile"
+                      className="w-full h-full rounded-full object-cover"
+                    />
+                  </div>
+                  <div className="absolute -bottom-1 -right-1 bg-[#0D1110] text-[#6B7E74] text-[9px] font-bold tracking-widest px-2 py-0.5 rounded-full border border-[#6B7E74]/40 font-sans uppercase shadow-xs">
+                    22 YRS
+                  </div>
+                </div>
+
+                {/* Title & Tagline */}
+                <div className="space-y-2 text-center sm:text-left">
+                  <span className="text-xs font-semibold text-[#6B7E74] tracking-[0.2em] uppercase font-sans">
+                    PROFESSIONAL PROFILE
+                  </span>
+                  <h2 className="font-cinzel text-3xl sm:text-4xl font-bold text-[#0D1110] tracking-wider uppercase">
+                    ABOUT ADV. P. R. RATHY
+                  </h2>
+                  <div className="w-16 h-[2px] bg-[#6B7E74] mx-auto sm:mx-0 mt-2"></div>
+                </div>
+
               </div>
 
               {/* Verified Factual Bio */}
