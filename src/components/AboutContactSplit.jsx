@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Phone, Mail, MapPin, MessageSquare, Award, Calendar, GraduationCap, Briefcase } from 'lucide-react';
 

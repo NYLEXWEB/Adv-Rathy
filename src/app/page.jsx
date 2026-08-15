@@ -1,0 +1,29 @@
+'use client';
+
+import Header from '../components/Header';
+import Hero from '../components/Hero';
+import ProfessionalCredentials from '../components/ProfessionalCredentials';
+import QuickInfoStrip from '../components/QuickInfoStrip';
+import PracticeAreas from '../components/PracticeAreas';
+import AboutContactSplit from '../components/AboutContactSplit';
+import JurisdictionNotary from '../components/JurisdictionNotary';
+import ContactSection from '../components/ContactSection';
+import Footer from '../components/Footer';
+
+export default function Home() {
+  return (
+    <div className="min-h-screen bg-[#F8F6F0] text-[#111615] selection:bg-[#6B7E74] selection:text-white font-sans">
+      <Header />
+      <main>
+        <Hero />
+        <ProfessionalCredentials />
+        <QuickInfoStrip />
+        <PracticeAreas />
+        <AboutContactSplit />
+        <JurisdictionNotary />
+        <ContactSection />
+      </main>
+      <Footer />
+    </div>
+  );
+}

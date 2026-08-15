@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { MapPin, Stamp, Scale, HeartHandshake, Gavel, FileCheck, CheckCircle2 } from 'lucide-react';
 

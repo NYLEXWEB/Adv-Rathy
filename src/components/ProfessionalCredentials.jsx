@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Award, Briefcase, GraduationCap, MapPin, Scale } from 'lucide-react';
 

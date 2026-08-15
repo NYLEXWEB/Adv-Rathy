@@ -1,0 +1,185 @@
+@import "tailwindcss";
+
+@layer base {
+    :root {
+        --bg-ivory: #F8F6F0;
+        --bg-card: #FAF8F3;
+        --bg-card-alt: #F4EFE6;
+        --dark-black: #0D1110;
+        --dark-black-hover: #181E1C;
+        --accent: #6B7E74;
+        --accent-light: #889A90;
+        --accent-muted: #A3B2AA;
+        --accent-dark: #4F6157;
+        --text-primary: #111615;
+        --text-secondary: #565C58;
+        --text-accent: #6B7E74;
+        --border-light: #E6E0D2;
+        --border-accent: rgba(107, 126, 116, 0.35);
+    }
+
+    body {
+        background-color: var(--bg-ivory);
+        color: var(--text-primary);
+        font-family: 'Plus Jakarta Sans', system-ui, -apple-system, sans-serif;
+        overflow-x: hidden;
+    }
+
+    h1,
+    h2,
+    h3,
+    h4,
+    .font-serif {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+
+    .font-cinzel {
+        font-family: 'Cinzel', serif;
+    }
+
+    .font-cormorant {
+        font-family: 'Cormorant Garamond', Georgia, serif;
+    }
+}
+
+/* Custom background paper texture effect */
+.bg-paper-texture {
+    background-color: #F8F6F0;
+    background-image:
+        radial-gradient(at 10% 10%, rgba(240, 235, 222, 0.5) 0px, transparent 50%),
+        radial-gradient(at 90% 90%, rgba(235, 228, 212, 0.4) 0px, transparent 50%),
+        radial-gradient(at 50% 50%, rgba(255, 255, 255, 0.6) 0px, transparent 80%);
+}
+
+.bg-dark-panel {
+    background-color: #0D1110;
+    background-image: radial-gradient(circle at top right, rgba(24, 30, 28, 0.5), transparent 70%);
+}
+
+/* Gold Underline Pill effect */
+.nav-link-active {
+    position: relative;
+}
+
+.nav-link-active::after {
+    content: '';
+    position: absolute;
+    bottom: -6px;
+    left: 0;
+    width: 100%;
+    height: 2.5px;
+    background-color: #6B7E74;
+    border-radius: 2px;
+}
+
+/* Elegant Section Gold Divider */
+.gold-divider {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    gap: 12px;
+}
+
+.gold-divider::before,
+.gold-divider::after {
+    content: '';
+    height: 1px;
+    width: 60px;
+    background: linear-gradient(90deg, transparent, #6B7E74, transparent);
+}
+
+/* Micro-animations and reveal keyframes */
+@keyframes fadeInUp {
+    from {
+        opacity: 0;
+        transform: translateY(20px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+@keyframes pulseGlow {
+
+    0%,
+    100% {
+        box-shadow: 0 0 0 0 rgba(107, 126, 116, 0.4);
+    }
+
+    50% {
+        box-shadow: 0 0 0 8px rgba(107, 126, 116, 0);
+    }
+}
+
+.animate-fade-in-up {
+    animation: fadeInUp 0.7s cubic-bezier(0.16, 1, 0.3, 1) forwards;
+}
+
+.pulse-glow {
+    animation: pulseGlow 2.5s infinite;
+}
+
+/* Premium Card Hover Lift & Glow Effects */
+.card-hover-effect {
+    transition: transform 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+        box-shadow 0.35s cubic-bezier(0.16, 1, 0.3, 1),
+        border-color 0.35s ease;
+}
+
+.card-hover-effect:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 16px 32px -8px rgba(13, 17, 16, 0.08), 0 4px 12px -2px rgba(107, 126, 116, 0.12);
+    border-color: rgba(107, 126, 116, 0.5);
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+    width: 8px;
+}
+
+::-webkit-scrollbar-track {
+    background: #F8F6F0;
+}
+
+::-webkit-scrollbar-thumb {
+    background: #889A90;
+    border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+    background: #6B7E74;
+}
+
+/* Hide scrollbar for clean touch carousel */
+.no-scrollbar::-webkit-scrollbar {
+    display: none;
+}
+
+.no-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
+}
+
+/* Infinite Smooth Auto-Scroll for Mobile Images */
+@keyframes scrollLeft {
+    0% {
+        transform: translateX(0);
+    }
+
+    100% {
+        transform: translateX(-50%);
+    }
+}
+
+.animate-scroll-left {
+    display: flex;
+    width: max-content;
+    animation: scrollLeft 20s linear infinite;
+}
+
+.animate-scroll-left:hover,
+.animate-scroll-left:active {
+    animation-play-state: paused;
+}

@@ -1,3 +1,5 @@
+'use client';
+
 import React from 'react';
 import { Scale, Users, ShieldAlert, FileText, ArrowUpRight, CheckCircle2 } from 'lucide-react';
 
