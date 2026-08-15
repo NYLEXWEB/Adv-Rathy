@@ -10,34 +10,30 @@ export default function ProfessionalCredentials() {
         <div className="bg-[#F4EFE6] border border-[#E6E0D2] rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xs">
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 divide-y sm:divide-y-0 sm:divide-x divide-[#E6E0D2]">
             
-            {/* 1. ENROLLMENT NO. - Refined Font & Gold Badge Styling */}
-            <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-2">
+            {/* 1. ENROLLMENT NO. */}
+            <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-1.5">
               <div className="flex items-center gap-2 text-[#BE9A5A]">
                 <Award className="w-4 h-4 text-[#BE9A5A]" />
                 <span className="text-[10px] font-bold tracking-[0.2em] uppercase font-sans text-[#8C733E]">
                   ENROLLMENT NO.
                 </span>
               </div>
-              <div className="bg-[#14201D] text-[#BE9A5A] px-4 py-2 rounded-lg border border-[#BE9A5A]/50 shadow-xs">
-                <span className="font-cinzel text-xl sm:text-2xl font-bold tracking-widest leading-none">
-                  K/000931/2004
-                </span>
-              </div>
+              <span className="font-cinzel text-xl sm:text-2xl font-bold text-[#14201D] tracking-wider pt-0.5">
+                K/000931/2004
+              </span>
             </div>
 
-            {/* 2. ENROLLMENT DATE - Refined Font & Gold Badge Styling */}
-            <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-2 pt-4 sm:pt-0 sm:pl-6 lg:pl-8">
+            {/* 2. ENROLLMENT DATE */}
+            <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-1.5 pt-4 sm:pt-0 sm:pl-6 lg:pl-8">
               <div className="flex items-center gap-2 text-[#BE9A5A]">
                 <Calendar className="w-4 h-4 text-[#BE9A5A]" />
                 <span className="text-[10px] font-bold tracking-[0.2em] uppercase font-sans text-[#8C733E]">
                   ENROLLMENT DATE
                 </span>
               </div>
-              <div className="bg-[#14201D] text-white px-4 py-2 rounded-lg border border-[#BE9A5A]/40 shadow-xs">
-                <span className="font-cinzel text-xl sm:text-2xl font-bold tracking-widest text-[#BE9A5A] leading-none">
-                  21.11.2004
-                </span>
-              </div>
+              <span className="font-cinzel text-xl sm:text-2xl font-bold text-[#14201D] tracking-wider pt-0.5">
+                21.11.2004
+              </span>
             </div>
 
             {/* 3. QUALIFICATION */}
