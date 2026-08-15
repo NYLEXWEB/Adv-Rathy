@@ -34,7 +34,7 @@ export default function Hero() {
           <h1 className="text-4xl sm:text-6xl lg:text-7xl font-bold text-[#0D1110] tracking-tight leading-[1.08] font-cormorant">
             Adv. P. R. Rathy
           </h1>
-          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6B7E74] font-cormorant italic tracking-wide">
+          <h2 className="text-2xl sm:text-3xl lg:text-4xl font-semibold text-[#6B7E74] font-serif italic tracking-wide">
             Advocate &amp; Notary
           </h2>
         </div>

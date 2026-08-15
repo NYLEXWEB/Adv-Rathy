@@ -1,68 +1,72 @@
 import React from 'react';
-import { Award, Calendar, GraduationCap, Briefcase } from 'lucide-react';
+import { Award, Briefcase, GraduationCap, MapPin, Scale } from 'lucide-react';
 
 export default function ProfessionalCredentials() {
+  const credentials = [
+    {
+      icon: Award,
+      label: 'ENROLLMENT NUMBER',
+      value: 'K/000931/2004',
+      sub: 'Bar Council of Kerala',
+    },
+    {
+      icon: Briefcase,
+      label: 'ENROLLMENT DATE',
+      value: '21.11.2004',
+      sub: '22 Years Standing',
+    },
+    {
+      icon: GraduationCap,
+      label: 'QUALIFICATION',
+      value: 'B.A., LL.B.',
+      sub: 'Professional Law Degree',
+    },
+    {
+      icon: Scale,
+      label: 'NOTARY APPOINTMENT',
+      value: 'Govt. Authorized',
+      sub: 'Notary Public Services',
+    },
+    {
+      icon: MapPin,
+      label: 'LOCATION & COURTS',
+      value: 'Sultan Bathery',
+      sub: 'Wayanad District Courts',
+    },
+  ];
+
   return (
-    <section className="bg-[#FAF8F3] border-b border-[#E6E0D2] py-8 sm:py-10 relative z-20">
+    <section className="bg-[#FAF8F3] border-b border-[#E6E0D2] py-10 relative overflow-hidden">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
-        {/* Outer Card Container */}
-        <div className="bg-[#F4EFE6] border border-[#E6E0D2] rounded-2xl p-6 sm:p-8 lg:p-10 shadow-2xs">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 lg:gap-8 divide-y sm:divide-y-0 sm:divide-x divide-[#E6E0D2]">
-            
-            {/* 1. ENROLLMENT NO. */}
-            <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-1.5">
-              <div className="flex items-center gap-2 text-[#6B7E74]">
-                <Award className="w-4 h-4 text-[#6B7E74]" />
-                <span className="text-[10px] font-bold tracking-[0.2em] uppercase font-sans text-[#4F6157]">
-                  ENROLLMENT NO.
-                </span>
-              </div>
-              <span className="font-cinzel text-xl sm:text-2xl font-bold text-[#0D1110] tracking-wider pt-0.5">
-                K/000931/2004
-              </span>
-            </div>
+        {/* Credentials Grid */}
+        <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-5 gap-4 sm:gap-6">
+          {credentials.map((item, index) => {
+            const Icon = item.icon;
+            return (
+              <div
+                key={index}
+                className="group relative bg-[#F8F6F0] border border-[#E6E0D2] rounded-xl p-5 text-center space-y-2 card-hover-effect transition-all duration-300 hover:border-[#6B7E74]/60"
+              >
+                {/* Icon with hover bounce */}
+                <div className="w-9 h-9 rounded-lg bg-[#FAF8F3] border border-[#E6E0D2] flex items-center justify-center mx-auto text-[#6B7E74] group-hover:scale-110 group-hover:bg-[#0D1110] group-hover:text-white transition-all duration-300">
+                  <Icon className="w-4 h-4" />
+                </div>
 
-            {/* 2. ENROLLMENT DATE */}
-            <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-1.5 pt-4 sm:pt-0 sm:pl-6 lg:pl-8">
-              <div className="flex items-center gap-2 text-[#6B7E74]">
-                <Calendar className="w-4 h-4 text-[#6B7E74]" />
-                <span className="text-[10px] font-bold tracking-[0.2em] uppercase font-sans text-[#4F6157]">
-                  ENROLLMENT DATE
-                </span>
+                <div>
+                  <span className="text-[9px] font-bold text-[#6B7E74] tracking-widest font-sans uppercase block">
+                    {item.label}
+                  </span>
+                  <p className="font-cormorant text-xl font-bold text-[#0D1110] tracking-tight group-hover:text-[#6B7E74] transition-colors">
+                    {item.value}
+                  </p>
+                  <p className="text-[10px] text-[#565C58] font-sans font-medium">
+                    {item.sub}
+                  </p>
+                </div>
               </div>
-              <span className="font-cinzel text-xl sm:text-2xl font-bold text-[#0D1110] tracking-wider pt-0.5">
-                21.11.2004
-              </span>
-            </div>
-
-            {/* 3. QUALIFICATION */}
-            <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-2 pt-4 sm:pt-0 sm:pl-6 lg:pl-8">
-              <div className="flex items-center gap-2 text-[#6B7E74]">
-                <GraduationCap className="w-4 h-4 text-[#6B7E74]" />
-                <span className="text-[10px] font-bold tracking-[0.2em] uppercase font-sans text-[#4F6157]">
-                  QUALIFICATION
-                </span>
-              </div>
-              <span className="font-serif text-xl sm:text-2xl font-bold text-[#0D1110] tracking-wide pt-1">
-                B.A., LL.B.
-              </span>
-            </div>
-
-            {/* 4. PRACTICE EXPERIENCE */}
-            <div className="flex flex-col items-center sm:items-start text-center sm:text-left space-y-2 pt-4 sm:pt-0 sm:pl-6 lg:pl-8">
-              <div className="flex items-center gap-2 text-[#6B7E74]">
-                <Briefcase className="w-4 h-4 text-[#6B7E74]" />
-                <span className="text-[10px] font-bold tracking-[0.2em] uppercase font-sans text-[#4F6157]">
-                  PRACTICE EXPERIENCE
-                </span>
-              </div>
-              <span className="font-serif text-xl sm:text-2xl font-bold text-[#0D1110] tracking-wide pt-1">
-                22 Years
-              </span>
-            </div>
-
-          </div>
+            );
+          })}
         </div>
 
       </div>
