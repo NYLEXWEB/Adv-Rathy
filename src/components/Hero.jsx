@@ -7,9 +7,9 @@ export default function Hero() {
   return (
     <section 
       id="home" 
-      className="relative w-full py-16 sm:py-24 lg:py-28 bg-[#F8F6F0] border-b border-[#E6E0D2] overflow-hidden"
+      className="relative w-full pt-28 sm:pt-36 lg:pt-40 pb-16 sm:pb-24 lg:pb-28 bg-[#F8F6F0] border-b border-[#E6E0D2] overflow-hidden"
     >
-      {/* Hero Section Background Image Overlay */}
+      {/* Hero Section Background Image Overlay - Extends seamlessly behind fixed Navbar */}
       <div 
         className="absolute inset-0 bg-cover bg-center bg-no-repeat opacity-15 pointer-events-none mix-blend-multiply transition-opacity duration-300"
         style={{ backgroundImage: "url('/hero%20section.jpg')" }}
@@ -24,7 +24,7 @@ export default function Hero() {
         {/* Top Legal Scales Badge */}
         <div className="inline-flex items-center justify-center gap-2 bg-[#FAF8F3]/90 border border-[#6B7E74]/50 px-4 py-1.5 rounded-full shadow-2xs backdrop-blur-xs">
           <Scale className="w-4 h-4 text-[#6B7E74]" strokeWidth={1.6} />
-          <span className="text-[10px] sm:text-xs font-bold text-[#6B7E74] tracking-[0.2em] uppercase font-sans">
+          <span className="text-[10px] sm:text-xs font-bold text-[#6B7E74] tracking-[0.25em] uppercase font-sans">
             ADVOCATE &amp; NOTARY
           </span>
         </div>

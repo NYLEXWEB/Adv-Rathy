@@ -17,8 +17,8 @@ export default function Header() {
   ];
 
   return (
-    <div className="sticky top-3 sm:top-4 z-50 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto transition-all">
-      <header className="bg-[#F8F6F0]/90 backdrop-blur-md border border-[#E6E0D2] rounded-xl sm:rounded-2xl shadow-sm transition-all">
+    <div className="fixed top-3 sm:top-4 inset-x-0 z-50 px-3 sm:px-6 lg:px-8 max-w-7xl mx-auto transition-all pointer-events-none">
+      <header className="bg-[#F8F6F0]/85 backdrop-blur-md border border-[#E6E0D2] rounded-xl sm:rounded-2xl shadow-sm transition-all pointer-events-auto">
         <div className="px-4 sm:px-6 lg:px-8 h-16 sm:h-20 flex items-center justify-between">
           
           {/* Brand / Official Advocate Logo Image */}
