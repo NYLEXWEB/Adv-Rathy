@@ -14,7 +14,7 @@ export const metadata = {
   },
   openGraph: {
     title: 'Notary Public Services in Sultan Bathery, Wayanad | Adv. P. R. Rathy',
-    description: 'Government authorized Notary Public services in Sultan Bathery, Wayanad. Affidavits, POA, rental agreements, and document notarization by Adv. P. R. Rathy.',
+    description: 'Central Government authorized Notary Public services in Sultan Bathery, Wayanad. Affidavits, POA, rental agreements, and document notarization by Adv. P. R. Rathy.',
     url: `${siteUrl}/notary-services`,
     images: [
       {

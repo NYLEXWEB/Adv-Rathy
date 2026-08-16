@@ -29,7 +29,7 @@ export default function ProfessionalCredentials() {
     {
       icon: Scale,
       label: 'NOTARY APPOINTMENT',
-      value: 'Govt. Authorized',
+      value: 'Central Govt. Authorized (India)',
       sub: 'Notary Public Services',
       isNumber: false,
     },

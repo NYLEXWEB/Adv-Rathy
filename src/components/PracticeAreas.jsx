@@ -9,7 +9,7 @@ export default function PracticeAreas() {
       id: 'notary',
       priority: 'PRIORITY 01',
       title: 'Notary Public',
-      subtitle: 'Central Govt. Authorized Notary',
+      subtitle: 'Central Govt. Authorized Notary (India)',
       icon: Scale,
       badge: 'OFFICIAL SERVICE',
       badgeColor: 'bg-[#0D1110] text-[#6B7E74] border-[#6B7E74]/40',
