@@ -14,7 +14,7 @@ export default function QuickInfoStrip() {
     {
       number: 'NOTARY',
       label: 'PUBLIC',
-      desc: 'Authorized Notary Public.',
+      desc: 'Government of India Authorized Notary Public.',
       icon: FileText,
       featured: true,
     },
