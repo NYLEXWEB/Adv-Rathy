@@ -52,7 +52,7 @@ export default function AboutContactSplit() {
 
               {/* Verified Factual Bio */}
               <p className="text-lg sm:text-xl text-[#0D1110] font-cormorant leading-relaxed">
-                Adv. P. R. Rathy is an Advocate and Notary with 22 years of professional legal practice. His practice includes Notary, Family Court, Criminal and Civil matters.
+                Adv. P. R. Rathy is an Advocate and Notary with 22 years of professional legal practice. Her practice includes Notary, Family Court, Criminal and Civil matters.
               </p>
 
               <p className="text-xs sm:text-sm text-[#565C58] leading-relaxed font-sans font-normal">
